@@ -1,6 +1,6 @@
 {
   "name": "bn-calendar",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Bangla calendar system with support for 'revised-2019' and 'revised-1966' variants. Supports creation, manipulation, and conversion between Bengali and Gregorian calendars with two variants: 'revised-2019' (default) and 'revised-1966'.",
   "main": "./dist/index.cjs",
   "type": "module",

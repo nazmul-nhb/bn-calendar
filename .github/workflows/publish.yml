@@ -85,52 +85,52 @@ jobs:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       # Generate release notes for the release
-      - name: Generate Release Notes
-        if: env.VERSION_UNCHANGED == 'false'
-        id: gen_notes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          set -euo pipefail
+      # - name: Generate Release Notes
+      #   if: env.VERSION_UNCHANGED == 'false'
+      #   id: gen_notes
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   run: |
+      #     set -euo pipefail
 
-          echo "LATEST_TAG: $LATEST_TAG"
-          git fetch --tags --prune
+      #     echo "LATEST_TAG: $LATEST_TAG"
+      #     git fetch --tags --prune
 
-          # tag commit SHA
-          TAG_SHA=$(git rev-parse "$LATEST_TAG")
-          echo "TAG_SHA: $TAG_SHA"
+      #     # tag commit SHA
+      #     TAG_SHA=$(git rev-parse "$LATEST_TAG")
+      #     echo "TAG_SHA: $TAG_SHA"
 
-          # show commits that are considered by the range (debug)
-          echo "Commits between $LATEST_TAG and HEAD:"
-          git --no-pager log --oneline "$LATEST_TAG..HEAD" || true
+      #     # show commits that are considered by the range (debug)
+      #     echo "Commits between $LATEST_TAG and HEAD:"
+      #     git --no-pager log --oneline "$LATEST_TAG..HEAD" || true
 
-          # first commit after the tag (earliest in range)
-          FIRST_AFTER=$(git rev-list --reverse "$LATEST_TAG..HEAD" | head -n 1 || true)
+      #     # first commit after the tag (earliest in range)
+      #     FIRST_AFTER=$(git rev-list --reverse "$LATEST_TAG..HEAD" | head -n 1 || true)
 
-          if [ -z "$FIRST_AFTER" ]; then
-            echo "No commits after $LATEST_TAG -> release_notes.md will be empty"
-            printf "" > release_notes.md
-          else
-            echo "First commit after last tag: $FIRST_AFTER"
-            git show -s --format="%h %s" "$FIRST_AFTER"
+      #     if [ -z "$FIRST_AFTER" ]; then
+      #       echo "No commits after $LATEST_TAG -> release_notes.md will be empty"
+      #       printf "" > release_notes.md
+      #     else
+      #       echo "First commit after last tag: $FIRST_AFTER"
+      #       git show -s --format="%h %s" "$FIRST_AFTER"
 
-            # generate release notes starting from the first commit AFTER last tag
-            pnpm dlx changelog-maker --start-ref "$FIRST_AFTER" > release_notes.md
-          fi
+      #       # generate release notes starting from the first commit AFTER last tag
+      #       pnpm dlx changelog-maker --start-ref "$FIRST_AFTER" > release_notes.md
+      #     fi
 
-          # sanity: ensure tag commit SHA is NOT included in generated notes
-          if [ -n "$TAG_SHA" ] && grep -q "$TAG_SHA" release_notes.md 2>/dev/null; then
-            echo "::warning::Tag commit SHA found inside release_notes.md — aborting to avoid including tagged commit"
-            echo "---- release_notes.md (top 60 lines) ----"
-            sed -n '1,60p' release_notes.md || true
-            echo "---- end ----"
-            exit 1
-          fi
+      #     # sanity: ensure tag commit SHA is NOT included in generated notes
+      #     if [ -n "$TAG_SHA" ] && grep -q "$TAG_SHA" release_notes.md 2>/dev/null; then
+      #       echo "::warning::Tag commit SHA found inside release_notes.md — aborting to avoid including tagged commit"
+      #       echo "---- release_notes.md (top 60 lines) ----"
+      #       sed -n '1,60p' release_notes.md || true
+      #       echo "---- end ----"
+      #       exit 1
+      #     fi
 
-          # export as multiline output
-          echo "body<<EOF" >> "$GITHUB_OUTPUT"
-          cat release_notes.md >> "$GITHUB_OUTPUT"
-          echo "EOF" >> "$GITHUB_OUTPUT"
+      #     # export as multiline output
+      #     echo "body<<EOF" >> "$GITHUB_OUTPUT"
+      #     cat release_notes.md >> "$GITHUB_OUTPUT"
+      #     echo "EOF" >> "$GITHUB_OUTPUT"
 
       # Create a Git tag if version is different
       - name: Create Git Tag
@@ -140,21 +140,21 @@ jobs:
           git push origin v${{ env.VERSION }}
 
       # Create GitHub Release if version is different
-      - name: Create Release
-        if: env.VERSION_UNCHANGED == 'false'
-        uses: softprops/action-gh-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: "v${{ env.VERSION }}"
-          name: "v${{ env.VERSION }}"
-          body: |
-            ## 📦 bn-calendar v${{ env.VERSION }}
-              
-            ### 🆕 Release Notes
-            ${{ steps.gen_notes.outputs.body }}
+      # - name: Create Release
+      #   if: env.VERSION_UNCHANGED == 'false'
+      #   uses: softprops/action-gh-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     tag_name: "v${{ env.VERSION }}"
+      #     name: "v${{ env.VERSION }}"
+      #     body: |
+      #       ## 📦 bn-calendar v${{ env.VERSION }}
 
-            **Compare Changes:** [${{ env.LATEST_TAG }} vs v${{ env.VERSION }}](https://github.com/${{ github.repository }}/compare/${{ env.LATEST_TAG }}...v${{ env.VERSION }})
+      #       ### 🆕 Release Notes
+      #       ${{ steps.gen_notes.outputs.body }}
 
-            ---
-            **[Docs](https://github.com/nazmul-nhb/bn-calendar#readme) • [NPM](https://www.npmjs.com/package/bn-calendar/v/${{ env.VERSION }})**
+      #       **Compare Changes:** [${{ env.LATEST_TAG }} vs v${{ env.VERSION }}](https://github.com/${{ github.repository }}/compare/${{ env.LATEST_TAG }}...v${{ env.VERSION }})
+
+      #       ---
+      #       **[Docs](https://github.com/nazmul-nhb/bn-calendar#readme) • [NPM](https://www.npmjs.com/package/bn-calendar/v/${{ env.VERSION }})**
