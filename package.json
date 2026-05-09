@@ -1,0 +1,97 @@
+{
+	"name": "bn-calendar",
+	"version": "1.0.0",
+	"description": "Bangla calendar system with support for 'revised-2019' and 'revised-1966' variants. Supports creation, manipulation, and conversion between Bengali and Gregorian calendars with two variants: 'revised-2019' (default) and 'revised-1966'.",
+	"main": "./dist/index.cjs",
+	"type": "module",
+	"scripts": {
+		"build": "tsdown",
+		"dev:pkg": "tsdown --watch",
+		"typecheck": "tsc --noEmit",
+		"prepublishOnly": "pnpm run build",
+		"commit": "nhb-commit",
+		"count": "nhb-count",
+		"delete": "nhb-delete",
+		"lint": "biome lint --diagnostic-level=error",
+		"fix": "biome check --write --diagnostic-level=error",
+		"format": "biome format --write --diagnostic-level=error",
+		"prepare": "husky"
+	},
+	"keywords": [
+		"calendar",
+		"bangla",
+		"bengali",
+		"date",
+		"time",
+		"gregorian",
+		"bn-calendar",
+		"bn-gregorian-conversion",
+		"bangla-date-converter",
+		"bn-calendar-helper",
+		"calendar-utilities"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"files": ["dist", "LICENSE", "README.md", "CHANGELOG.md", "package.json"],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nazmul-nhb/nhb-toolbox.git"
+	},
+	"homepage": "https://toolbox.nazmul-nhb.dev",
+	"author": {
+		"name": "Nazmul Hassan",
+		"email": "nazmulnhb@gmail.com",
+		"url": "https://nazmul-nhb.dev"
+	},
+	"contributors": [
+		{
+			"name": "Nazmul Hassan",
+			"email": "nazmulnhb007@yahoo.com",
+			"url": "https://github.com/nazmul-nhb"
+		},
+		{
+			"name": "Nazmul Hassan",
+			"email": "nazmulnhb@gmail.com",
+			"url": "https://github.com/nhb-nazmul"
+		}
+	],
+	"bugs": {
+		"url": "https://github.com/nazmul-nhb/bn-calendar/issues",
+		"email": "nazmulnhb@gmail.com"
+	},
+	"license": "Apache-2.0",
+	"packageManager": "pnpm@11.0.9+sha512.34ce82e6780233cf9cad8685029a8f81d2e06196c5a9bad98879f7424940c6817c4e4524fb7d38b8553ceed48b9758b8ebaf1abd3600c232c4c8cf7366086f38",
+	"devDependencies": {
+		"@biomejs/biome": "^2.4.14",
+		"@types/node": "^25.6.2",
+		"husky": "^9.1.7",
+		"lint-staged": "^17.0.3",
+		"nhb-scripts": "^1.9.2",
+		"nhb-toolbox": "^4.30.1",
+		"tsdown": "^0.22.0",
+		"typescript": "^6.0.3"
+	},
+	"lint-staged": {
+		"*.+((c|m)?js(x)?|(c|m)?ts(x)?)": [
+			"biome format --write --diagnostic-level=error",
+			"biome lint --diagnostic-level=error"
+		]
+	},
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.cts",
+	"exports": {
+		".": {
+			"import": "./dist/index.mjs",
+			"require": "./dist/index.cjs"
+		},
+		"./types": {
+			"import": "./dist/types.mjs",
+			"require": "./dist/types.cjs"
+		},
+		"./package.json": "./package.json"
+	},
+	"inlinedDependencies": {
+		"nhb-toolbox": "4.30.1"
+	}
+}

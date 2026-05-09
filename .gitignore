@@ -1,0 +1,5 @@
+node_modules
+.estimator
+dist
+.env
+__*.ts
