@@ -1,9 +1,10 @@
 {
   "name": "bn-calendar",
-  "version": "1.1.1",
-  "description": "Bangla calendar system with support for 'revised-2019' and 'revised-1966' variants. Supports creation, manipulation, and conversion between Bengali and Gregorian calendars with two variants: 'revised-2019' (default) and 'revised-1966'.",
+  "version": "1.2.0",
+  "description": "Comprehensive Bengali calendar system library built for any JavaScript and TypeScript environment.",
   "main": "./dist/index.cjs",
   "type": "module",
+  "sideEffects": false,
   "scripts": {
     "build": "tsdown",
     "dev:pkg": "tsdown --watch",
@@ -18,17 +19,30 @@
     "prepare": "husky"
   },
   "keywords": [
+    "bn-calendar",
+    "bangla-calendar",
+    "bengali-calendar",
     "calendar",
     "bangla",
     "bengali",
     "date",
-    "time",
     "gregorian",
-    "bn-calendar",
-    "bn-gregorian-conversion",
+    "calendar-utilities",
+    "bangla-date",
+    "bangla-gregorian-conversion",
     "bangla-date-converter",
+    "bangla-calendar-helper",
+    "bangla-calendar-utilities",
+    "bengali-date",
+    "bengali-gregorian-conversion",
+    "bengali-date-converter",
+    "bengali-calendar-helper",
+    "bengali-calendar-utilities",
+    "bn-date",
+    "bn-gregorian-conversion",
+    "bn-date-converter",
     "bn-calendar-helper",
-    "calendar-utilities"
+    "bn-calendar-utilities"
   ],
   "publishConfig": {
     "access": "public"
@@ -37,14 +51,13 @@
     "dist",
     "LICENSE",
     "README.md",
-    "CHANGELOG.md",
     "package.json"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nazmul-nhb/nhb-toolbox.git"
+    "url": "git+https://github.com/nazmul-nhb/bn-calendar.git"
   },
-  "homepage": "https://toolbox.nazmul-nhb.dev",
+  "homepage": "https://github.com/nazmul-nhb/bn-calendar#readme",
   "author": {
     "name": "Nazmul Hassan",
     "email": "nazmulnhb@gmail.com",
@@ -94,6 +107,10 @@
     "./types": {
       "import": "./dist/types.mjs",
       "require": "./dist/types.cjs"
+    },
+    "./utils": {
+      "import": "./dist/utils.mjs",
+      "require": "./dist/utils.cjs"
     },
     "./package.json": "./package.json"
   },

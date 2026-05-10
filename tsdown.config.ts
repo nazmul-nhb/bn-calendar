@@ -1,10 +1,11 @@
 import { defineConfig } from 'tsdown';
 
 export default defineConfig({
+	entry: ['src/index.ts', 'src/types.ts', 'src/utils.ts'],
 	globalName: 'BanglaCalendar',
 	format: ['esm', 'cjs'],
-	entry: ['src/index.ts', 'src/types.ts'],
 	dts: true,
+	minify: true,
 	exports: true,
 	unbundle: false,
 	treeshake: true,

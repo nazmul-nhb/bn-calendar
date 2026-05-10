@@ -5,7 +5,8 @@
 		"paths": {
 			"*": ["./*"]
 		},
-		"rootDir": "./src",
+		"module": "preserve",
+		"rootDir": "./",
 		"outDir": "./dist",
 		"declaration": false,
 		"declarationMap": false,
