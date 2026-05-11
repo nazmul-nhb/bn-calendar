@@ -5,7 +5,7 @@ export default defineConfig({
 	globalName: 'BanglaCalendar',
 	format: ['esm', 'cjs'],
 	dts: true,
-	minify: true,
+	minify: false,
 	exports: true,
 	unbundle: false,
 	treeshake: true,

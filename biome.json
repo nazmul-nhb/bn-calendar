@@ -62,6 +62,7 @@
 				"useArrayLiterals": "error",
 				"useAsConstAssertion": "error",
 				"useBlockStatements": "off",
+				"useImportType": "warn",
 				"useConst": "warn"
 			},
 			"suspicious": {
