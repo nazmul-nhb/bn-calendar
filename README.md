@@ -96,10 +96,10 @@ import { BanglaCalendar } from 'bn-calendar';
 - [Quick Examples](#quick-examples)
 - [API Reference](#api-reference)
   - [Constructor](#constructor)
-  - [Constructor Signatures](#constructor-signatures)
-  - [Parameters](#parameters)
-  - [Behavior](#behavior)
-  - [Examples](#examples)
+    - [Constructor Signatures](#constructor-signatures)
+    - [Parameters](#parameters)
+    - [Behavior](#behavior)
+    - [Examples](#examples)
   - [Properties](#properties)
     - [variant](#variant)
     - [year](#year)
@@ -191,7 +191,7 @@ const date5 = new BanglaCalendar('১৪৩০', '১', '১', { variant: 'revis
 
 Creates a new `BanglaCalendar` instance from various input formats.
 
-### Constructor Signatures
+#### Constructor Signatures
 
 **Signature 1:** From current date with optional configuration
 
@@ -257,7 +257,7 @@ constructor(
 )
 ```
 
-### Parameters
+#### Parameters
 
 - `date`: Various date formats including Bangla date strings, Gregorian date strings, Date objects, timestamps, or individual date components
 - `bnYear`: Bengali year in either Bangla (`০-৯৯৯৯`) or Latin (`0-9999`) digits
@@ -265,7 +265,7 @@ constructor(
 - `bnDate`: Bengali day of month (1-31 or `১-৩১`)
 - `config`: Optional configuration object with `variant` property (`'revised-2019'` or `'revised-1966'`)
 
-### Behavior
+#### Behavior
 
 - Automatically detects input format and parses accordingly
 - Defaults to current date if no valid input is provided
@@ -273,7 +273,7 @@ constructor(
 - Validates all date components
 - Handles leap years according to the selected variant
 
-### Examples
+#### Examples
 
 ```typescript
 // Current date

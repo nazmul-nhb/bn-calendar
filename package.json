@@ -1,6 +1,6 @@
 {
   "name": "bn-calendar",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Comprehensive Bengali calendar system library built for any JavaScript and TypeScript environment.",
   "main": "./dist/index.cjs",
   "type": "module",
