@@ -1,13 +1,12 @@
+import { banglaToDigit, digitToBangla } from 'toolbox-x';
 import {
-	banglaToDigit,
-	digitToBangla,
 	isDateString,
 	isInteger,
 	isNonEmptyString,
 	isNumber,
 	isObjectWithKeys,
-} from 'nhb-toolbox';
-import type { Enumerate, NumberRange } from 'nhb-toolbox/number/types';
+} from 'toolbox-x/guards';
+import type { Enumerate, NumberRange } from 'toolbox-x/types/number';
 import { BN_DAYS, BN_MONTH_TABLES, BN_MONTHS, BN_YEAR_OFFSET, MS_PER_DAY } from './constants';
 import {
 	_bnDaysMonthIdx,

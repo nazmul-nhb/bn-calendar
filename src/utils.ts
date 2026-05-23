@@ -1,1 +1,1 @@
-export { banglaToDigit, digitToBangla } from 'nhb-toolbox';
+export { banglaToDigit, digitToBangla } from 'toolbox-x';

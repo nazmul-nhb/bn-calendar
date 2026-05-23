@@ -1,6 +1,6 @@
 {
   "name": "bn-calendar",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Comprehensive Bengali calendar system library built for any JavaScript and TypeScript environment.",
   "main": "./dist/index.cjs",
   "type": "module",
@@ -26,6 +26,8 @@
     "nhb",
     "nazmul-nhb",
     "nhb-toolbox",
+    "toolbox-x",
+    "bongabdo",
     "calendar",
     "bangla",
     "bengali",
@@ -88,12 +90,12 @@
   "license": "Apache-2.0",
   "packageManager": "pnpm@11.0.9+sha512.34ce82e6780233cf9cad8685029a8f81d2e06196c5a9bad98879f7424940c6817c4e4524fb7d38b8553ceed48b9758b8ebaf1abd3600c232c4c8cf7366086f38",
   "devDependencies": {
-    "@biomejs/biome": "^2.4.14",
-    "@types/node": "^25.6.2",
+    "@biomejs/biome": "^2.4.15",
+    "@types/node": "^25.9.1",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.3",
+    "lint-staged": "^17.0.5",
     "nhb-scripts": "^1.9.2",
-    "nhb-toolbox": "^4.30.1",
+    "toolbox-x": "1.0.1-rc.6",
     "tsdown": "^0.22.0",
     "typescript": "^6.0.3"
   },
@@ -121,6 +123,6 @@
     "./package.json": "./package.json"
   },
   "inlinedDependencies": {
-    "nhb-toolbox": "4.30.1"
+    "toolbox-x": "1.0.1-rc.6"
   }
 }

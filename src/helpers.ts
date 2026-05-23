@@ -1,5 +1,5 @@
-import { isLeapYear } from 'nhb-toolbox';
-import type { Enumerate, NumberRange } from 'nhb-toolbox/number/types';
+import { isLeapYear } from 'toolbox-x/guards';
+import type { Enumerate, NumberRange } from 'toolbox-x/types/number';
 import {
 	BN_MONTH_TABLES,
 	BN_SEASONS,

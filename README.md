@@ -1497,7 +1497,7 @@ import { banglaToDigit, digitToBangla } from 'bn-calendar/utils'
 
 > [!NOTE]
 >
-> `banglaToDigit()` and `digitToBangla()` functions are imported from the [**nhb-toolbox**](https://toolbox.nazmul-nhb.dev/) package.
+> `banglaToDigit()` and `digitToBangla()` functions are imported from the [**toolbox-x**](https://toolbox-x.nazmul-nhb.dev/) package.
 
 The digit conversion utilities provide seamless conversion between Bangla (Bengali) digits (`০-৯`) and Latin (Arabic) digits (`0-9`). These functions are essential for applications that need to handle multilingual numeric representations, particularly in Bengali-language interfaces.
 
