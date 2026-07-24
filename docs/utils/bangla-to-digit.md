@@ -25,12 +25,12 @@ banglaToDigit<Force extends boolean = true>(
 
 ## Behavior Matrix
 
-| Input Condition | `forceNumber = true` (Default) | `forceNumber = false` |
-| --------------- | ------------------------------ | --------------------- |
-| Contains only Bangla digits | Returns converted `number` (e.g. `123`) | Returns converted `string` (e.g. `"123"`) |
-| Contains mixed characters | Returns `number` (digits extracted) | Returns `string` (digits converted, text kept) |
-| Empty string (`""`) | Returns `NaN` | Returns empty string (`""`) |
-| No digits in string | Returns `0` or `NaN` | Returns original string |
+| Input Condition             | `forceNumber = true` (Default)          | `forceNumber = false`                          |
+| --------------------------- | --------------------------------------- | ---------------------------------------------- |
+| Contains only Bangla digits | Returns converted `number` (e.g. `123`) | Returns converted `string` (e.g. `"123"`)      |
+| Contains mixed characters   | Returns `number` (digits extracted)     | Returns `string` (digits converted, text kept) |
+| Empty string (`""`)         | Returns `NaN`                           | Returns empty string (`""`)                    |
+| No digits in string         | Returns `0` or `NaN`                    | Returns original string                        |
 
 ## Code Examples
 

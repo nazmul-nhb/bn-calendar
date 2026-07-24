@@ -64,14 +64,14 @@ constructor(
 
 ## Parameters
 
-| Parameter | Type | Description |
-| --------- | ---- | ----------- |
-| `date` | `string \| Date` | Bangla date string (`"১৪৩০-০১-০১"`), Gregorian date string (`"2023-04-14"`), or JavaScript `Date` instance. |
-| `tsOrBnYear` | `number` | Unix timestamp (in milliseconds) or Bangla year in Latin digits (0-9999). |
-| `bnYear` | `number \| BanglaYear` | Bengali year in either Latin digits (`0-9999`) or Bangla digits (`০-৯৯৯৯`). |
-| `bnMonth` | `NumberRange<1, 12> \| BanglaMonth` | Bengali month number (`1-12`) or Bangla month string (`১-১২`). Defaults to month `1` if omitted. |
-| `bnDate` | `NumberRange<1, 31> \| BanglaDate` | Bengali day of month (`1-31`) or Bangla date string (`১-৩১`). Defaults to day `1` if omitted. |
-| `config` | `BnCalendarConfig` | Optional configuration object containing `variant: 'revised-2019' | 'revised-1966'`. |
+| Parameter    | Type                   | Description                                                                                         |
+| ------------ | ---------------------- | --------------------------------------------------------------------------------------------------- |
+| `date`       | `string \| Date`       | Bangla date string (`"১৪৩০-০১-০১"`), Gregorian date string (`"2023-04-14"`), or JS `Date` instance. |
+| `tsOrBnYear` | `number`               | Unix timestamp (in milliseconds) or Bangla year in Latin digits (0-9999).                           |
+| `bnYear`     | `number \| BanglaYear` | Bengali year in either Latin digits (`0-9999`) or Bangla digits (`০-৯৯৯৯`).                         |
+| `bnMonth`    | `1-12 \| BanglaMonth`  | Bengali month number (`1-12`) or Bangla month string (`১-১২`). Defaults to month `1` if omitted.    |
+| `bnDate`     | `1-31 \| BanglaDate`   | Bengali day of month (`1-31`) or Bangla date string (`১-৩১`). Defaults to day `1` if omitted.       |
+| `config`     | `BnCalendarConfig`     | Optional configuration object containing `variant: 'revised-2019' \| 'revised-1966'`.               |
 
 ## Overload Resolution & Behavior
 

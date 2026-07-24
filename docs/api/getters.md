@@ -1,14 +1,15 @@
+<!-- markdownlint-disable-file MD024 -->
 # Getters API
 
 Methods for retrieving localized names for month, day of week, and season.
 
 ## Method Overview
 
-| Method | Signature | Description |
-| ------ | --------- | ----------- |
-| [`getMonthName()`](#getmonthname) | `getMonthName<Locale extends $BnEn = 'bn'>(locale?: Locale): BanglaMonthName<Locale>` | Returns month name in Bengali or English. |
-| [`getDayName()`](#getdayname) | `getDayName<Locale extends $BnEn = 'bn'>(locale?: Locale): BanglaDayName<Locale>` | Returns weekday name in Bengali or English. |
-| [`getSeasonName()`](#getseasonname) | `getSeasonName<Locale extends $BnEn = 'bn'>(locale?: Locale): BanglaSeasonName<Locale>` | Returns season name in Bengali or English. |
+| Method                              | Description                                 |
+| ----------------------------------- | ------------------------------------------- |
+| [`getMonthName()`](#getmonthname)   | Returns month name in Bengali or English.   |
+| [`getDayName()`](#getdayname)       | Returns weekday name in Bengali or English. |
+| [`getSeasonName()`](#getseasonname) | Returns season name in Bengali or English.  |
 
 ---
 

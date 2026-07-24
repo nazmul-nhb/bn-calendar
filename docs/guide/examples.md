@@ -21,14 +21,14 @@ import { banglaToDigit } from 'bn-calendar/utils';
 
 // Handling form input from a Bengali user
 function processUserInput(rawInput: string) {
-	// e.g. rawInput = "১৪৩০-০১-১৫" or "2023-04-28"
-	const calendar = new BanglaCalendar(rawInput);
-	
-	return {
-		banglaDate: calendar.toJSON(),
-		gregorianDate: calendar.toDate().toISOString().split('T')[0],
-		formatted: calendar.format('DD mmmm YYYY'),
-	};
+ // e.g. rawInput = "১৪৩০-০১-১৫" or "2023-04-28"
+ const calendar = new BanglaCalendar(rawInput);
+ 
+ return {
+  banglaDate: calendar.toJSON(),
+  gregorianDate: calendar.toDate().toISOString().split('T')[0],
+  formatted: calendar.format('DD mmmm YYYY'),
+ };
 }
 
 console.log(processUserInput('১৪৩০-০১-১৫'));
@@ -41,8 +41,8 @@ Pohela Boishakh is always 1st Boishakh (`১ বৈশাখ`). You can find the
 
 ```typescript
 function getPohelaBoishakhGregorianDate(banglaYear: number) {
-	const boishakh1 = new BanglaCalendar(banglaYear, 1, 1);
-	return boishakh1.toDate();
+ const boishakh1 = new BanglaCalendar(banglaYear, 1, 1);
+ return boishakh1.toDate();
 }
 
 console.log(getPohelaBoishakhGregorianDate(1431).toDateString());
@@ -55,21 +55,21 @@ Generate an array of days for rendering a full month view component in a web fro
 
 ```typescript
 function generateMonthDays(year: number, month: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12) {
-	const start = new BanglaCalendar(year, month, 1);
-	const totalDays = start.daysInMonth();
-	
-	const days = [];
-	for (let d = 1; d <= totalDays; d++) {
-		const currentDay = new BanglaCalendar(year, month, d);
-		days.push({
-			banglaDay: currentDay.date.bn,
-			latinDay: currentDay.date.en,
-			weekDayName: currentDay.getDayName(),
-			gregorianDate: currentDay.gregorian,
-		});
-	}
-	
-	return days;
+ const start = new BanglaCalendar(year, month, 1);
+ const totalDays = start.daysInMonth();
+ 
+ const days = [];
+ for (let d = 1; d <= totalDays; d++) {
+  const currentDay = new BanglaCalendar(year, month, d);
+  days.push({
+   banglaDay: currentDay.date.bn,
+   latinDay: currentDay.date.en,
+   weekDayName: currentDay.getDayName(),
+   gregorianDate: currentDay.gregorian,
+  });
+ }
+ 
+ return days;
 }
 
 const boishakhDays = generateMonthDays(1430, 1);
@@ -78,6 +78,7 @@ console.log(`Boishakh 1430 has ${boishakhDays.length} days`);
 
 ::: tip More Examples
 Check out dedicated standalone examples:
+
 - [Basic Usage Examples](../examples/basic.md)
 - [Conversion Examples](../examples/conversion.md)
 - [Formatting Examples](../examples/formatting.md)

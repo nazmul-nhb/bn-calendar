@@ -1,3 +1,5 @@
+<!-- markdownlint-disable-file md024 -->
+
 # Digit Conversion Utilities
 
 `bn-calendar` re-exports standalone digit conversion utilities via `bn-calendar/utils`. These functions allow converting between Bengali digits (`০-৯`) and Latin/Arabic digits (`0-9`).

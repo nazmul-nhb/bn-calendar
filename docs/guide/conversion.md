@@ -62,20 +62,10 @@ const timestamp = bnCal.valueOf(); // 1681430400000
 const reconstitutedDate = new Date(timestamp);
 ```
 
-## Round-Trip Conversion Guarantee
-
-The conversion engine is fully deterministic and bidirectional. Converting a date from Gregorian to Bangla and back to Gregorian preserves the exact date:
-
-```typescript
-const originalGregorian = new Date('2024-02-14T00:00:00.000Z');
-const bangla = new BanglaCalendar(originalGregorian);
-const convertedGregorian = bangla.toDate();
-
-console.log(originalGregorian.getTime() === convertedGregorian.getTime()); // true
-```
-
 ::: tip Related API Pages
+
 - [toDate() API Reference](../api/serialization.md#todate)
 - [gregorian Property API Reference](../api/properties.md#gregorian)
 - [valueOf() API Reference](../api/serialization.md#valueof)
+
 :::

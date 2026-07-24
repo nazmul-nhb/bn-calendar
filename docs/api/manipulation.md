@@ -4,18 +4,18 @@ Methods for date arithmetic, boundary queries, month length inspection, and leap
 
 ## Method Overview
 
-| Method | Signature | Description |
-| ------ | --------- | ----------- |
-| [`addDays()`](#adddays) | `addDays(days: number): BanglaCalendar` | Adds or subtracts days. |
-| [`addWeeks()`](#addweeks) | `addWeeks(weeks: number): BanglaCalendar` | Adds or subtracts weeks (7-day intervals). |
-| [`addMonths()`](#addmonths) | `addMonths(months: number, overflow?: boolean): BanglaCalendar` | Adds or subtracts months with optional day overflow clamping. |
-| [`addYears()`](#addyears) | `addYears(years: number, overflow?: boolean): BanglaCalendar` | Adds or subtracts years with leap year handling. |
-| [`startOfMonth()`](#startofmonth) | `startOfMonth(): BanglaCalendar` | Returns instance set to 1st day of current month. |
-| [`endOfMonth()`](#endofmonth) | `endOfMonth(): BanglaCalendar` | Returns instance set to last day of current month. |
-| [`startOfYear()`](#startofyear) | `startOfYear(): BanglaCalendar` | Returns instance set to 1 Boishakh (`১ বৈশাখ`). |
-| [`endOfYear()`](#endofyear) | `endOfYear(): BanglaCalendar` | Returns instance set to 30 Choitro (`৩০ চৈত্র`). |
-| [`daysInMonth()`](#daysinmonth) | `daysInMonth(month?: NumberRange<1, 12>): NumberRange<29, 31>` | Returns number of days in specified month (or current month). |
-| [`isLeapYear()`](#isleapyear) | `isLeapYear(): boolean` | Checks if current year is a leap year according to variant rules. |
+| Method                            |  Description                                                       |
+| --------------------------------- |  ----------------------------------------------------------------- |
+| [`addDays()`](#adddays)           |  Adds or subtracts days.                                           |
+| [`addWeeks()`](#addweeks)         |  Adds or subtracts weeks (7-day intervals).                        |
+| [`addMonths()`](#addmonths)       |  Adds or subtracts months with optional day overflow clamping.     |
+| [`addYears()`](#addyears)         |  Adds or subtracts years with leap year handling.                  |
+| [`startOfMonth()`](#startofmonth) |  Returns instance set to 1st day of current month.                 |
+| [`endOfMonth()`](#endofmonth)     |  Returns instance set to last day of current month.                |
+| [`startOfYear()`](#startofyear)   |  Returns instance set to 1 Boishakh (`১ বৈশাখ`).                   |
+| [`endOfYear()`](#endofyear)       |  Returns instance set to 30 Choitro (`৩০ চৈত্র`).                  |
+| [`daysInMonth()`](#daysinmonth)   |  Returns number of days in specified month (or current month).     |
+| [`isLeapYear()`](#isleapyear)     |  Checks if current year is a leap year according to variant rules. |
 
 ---
 
@@ -61,6 +61,7 @@ addMonths(months: number, overflow?: boolean): BanglaCalendar
 ```
 
 Adds or subtracts months. Parameter `overflow` (default `true`):
+
 - `true`: Invalid dates overflow into the next month.
 - `false`: Clamps to the last valid day of the target month.
 

@@ -14,7 +14,6 @@ export default defineConfig({
 		logo: { src: '/icon.png', alt: 'Bangla Calendar Logo' },
 
 		nav: [
-			{ text: 'Home', link: '/' },
 			{ text: 'Getting Started', link: '/getting-started/installation' },
 			{ text: 'Guide', link: '/guide/creating-dates' },
 			{ text: 'API Reference', link: '/api/constructor' },
@@ -29,6 +28,7 @@ export default defineConfig({
 				items: [
 					{ text: 'Installation', link: '/getting-started/installation' },
 					{ text: 'Quick Start', link: '/getting-started/quick-start' },
+					{ text: 'Features', link: '/getting-started/features' },
 					{ text: 'Calendar Variants', link: '/getting-started/calendar-variants' },
 					{ text: 'Pros & Cons', link: '/getting-started/pros-and-cons' },
 					{ text: 'Formatting', link: '/getting-started/formatting' },
@@ -101,6 +101,11 @@ export default defineConfig({
 			{ icon: 'github', link: 'https://github.com/nazmul-nhb/bn-calendar/' },
 			{ icon: 'npm', link: 'https://www.npmjs.com/package/bn-calendar/' },
 		],
+
+		footer: {
+			message: 'Released under the Apache 2.0 License.',
+			copyright: 'Copyright © 2026-present Nazmul Hassan',
+		},
 	},
 
 	markdown: {
@@ -109,9 +114,6 @@ export default defineConfig({
 		},
 	},
 	vite: {
-		plugins: [
-			// Injects the actual SVG icons into the bundle
-			groupIconVitePlugin(),
-		],
+		plugins: [groupIconVitePlugin()],
 	},
 });

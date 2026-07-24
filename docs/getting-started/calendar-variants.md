@@ -4,10 +4,10 @@ The Bengali calendar system has evolved over time. `bn-calendar` provides native
 
 ## Variant Overview
 
-| Variant          | Description                                                                           | Leap Year Rule                              | Default |
-| ---------------- | ------------------------------------------------------------------------------------- | ------------------------------------------- | ------- |
-| `'revised-2019'` | Official Bangladesh national standard adopted in 2019 by Bangla Academy.              | Synchronized with Gregorian leap year rules | **Yes** |
-| `'revised-1966'` | Classical revised calendar established in 1966 by Dr. Muhammad Shahidullah committee. | `bnYear % 4 === 2`                          | No      |
+| Variant          | Description                                                                 | Leap Year Rule            | Default |
+| ---------------- | --------------------------------------------------------------------------- | ------------------------- | ------- |
+| `'revised-2019'` | Official Bangladesh national standard adopted in 2019 by Bangla Academy.    | Gregorian leap year rules | **Yes** |
+| `'revised-1966'` | Revised calendar established in 1966 by Dr. Muhammad Shahidullah committee. | `bnYear % 4 === 2`        | No      |
 
 ## Month Lengths Comparison
 

@@ -1,14 +1,15 @@
+<!-- markdownlint-disable-file MD024 -->
 # Formatting API
 
 Methods for converting `BanglaCalendar` instances into formatted string representations.
 
 ## Method Overview
 
-| Method | Signature | Description |
-| ------ | --------- | ----------- |
-| [`format()`](#format) | `format(format?: BanglaDateFormat): string` | Formats date using token patterns. Default: `'ddd, DD mmmm (SS), YYYY বঙ্গাব্দ'` |
-| [`toString()`](#tostring) | `toString(): string` | Formats date as full Bengali string. Output: `"Friday, 1 Boishakh, 1430 [Grisma]"` in Bangla script. |
-| [`toStringEn()`](#tostringen) | `toStringEn(): string` | Formats date as full English string. Output: `"Shukrobar (Friday), 1 Boishakh, 1430 [Grisma (Summer)]"`. |
+| Method                        | Description                                                                                              |
+| ----------------------------- | -------------------------------------------------------------------------------------------------------- |
+| [`format()`](#format)         | Formats date using token patterns. Default: `'ddd, DD mmmm (SS), YYYY বঙ্গাব্দ'`                         |
+| [`toString()`](#tostring)     | Formats date as full Bengali string. Output: `"Friday, 1 Boishakh, 1430 [Grisma]"` in Bangla script.     |
+| [`toStringEn()`](#tostringen) | Formats date as full English string. Output: `"Shukrobar (Friday), 1 Boishakh, 1430 [Grisma (Summer)]"`. |
 
 ---
 
@@ -52,22 +53,22 @@ console.log(date.format('DD mmm, YYYY'));
 
 #### Available Format Tokens
 
-| Category | Token | Description | Example Output |
-| -------- | ----- | ----------- | -------------- |
-| **Year** | `YYYY` / `yyyy` | 4-digit Bangla year | `১৪৩০` |
-| | `YY` / `yy` | 2-digit Bangla year | `৩০` |
-| **Month** | `M` | Month number (1-12) in Bangla digits | `১` |
-| | `MM` | Zero-padded month number (01-12) in Bangla digits | `০১` |
-| | `mmm` | Short month name in Bangla | `বৈ` |
-| | `mmmm` | Full month name in Bangla | `বৈশাখ` |
-| **Day/Date** | `D` | Date of month (1-31) in Bangla digits | `১` |
-| | `DD` | Zero-padded date of month (01-31) in Bangla digits | `০১` |
-| | `Do` | Date with cardinal suffix | `১লা` / `১৫ই` |
-| **Weekday** | `d` | Short weekday name | `শু` |
-| | `dd` | Weekday name without 'বার' suffix | `শুক্রবার` without 'বার' -> `শুক্র` |
-| | `ddd` | Full weekday name | `শুক্রবার` |
-| **Season** | `S` | Season name | `গ্রীষ্ম` |
-| | `SS` | Season name with 'কাল' suffix | `গ্রীষ্মকাল` |
+| Category     | Token           | Description                                        | Example Output                      |
+| ------------ | --------------- | -------------------------------------------------- | ----------------------------------- |
+| **Year**     | `YYYY` / `yyyy` | 4-digit Bangla year                                | `১৪৩০`                              |
+|              | `YY` / `yy`     | 2-digit Bangla year                                | `৩০`                                |
+| **Month**    | `M`             | Month number (1-12) in Bangla digits               | `১`                                 |
+|              | `MM`            | Zero-padded month number (01-12) in Bangla digits  | `০১`                                |
+|              | `mmm`           | Short month name in Bangla                         | `বৈ`                                |
+|              | `mmmm`          | Full month name in Bangla                          | `বৈশাখ`                             |
+| **Day/Date** | `D`             | Date of month (1-31) in Bangla digits              | `১`                                 |
+|              | `DD`            | Zero-padded date of month (01-31) in Bangla digits | `০১`                                |
+|              | `Do`            | Date with cardinal suffix                          | `১লা` / `১৫ই`                       |
+| **Weekday**  | `d`             | Short weekday name                                 | `শু`                                |
+|              | `dd`            | Weekday name without 'বার' suffix                  | `শুক্রবার` without 'বার' -> `শুক্র` |
+|              | `ddd`           | Full weekday name                                  | `শুক্রবার`                          |
+| **Season**   | `S`             | Season name                                        | `গ্রীষ্ম`                           |
+|              | `SS`            | Season name with 'কাল' suffix                      | `গ্রীষ্মকাল`                        |
 
 #### Escaping Text
 

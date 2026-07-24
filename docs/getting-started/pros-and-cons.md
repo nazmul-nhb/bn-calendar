@@ -19,6 +19,6 @@ Understanding the design tradeoffs of `bn-calendar` will help you determine how 
 - **Extensive Surface Area**:
   The `BanglaCalendar` class combines date representation, manipulation, formatting, and validation into a single class. While convenient for general use, lightweight utilities may pull in the full class if not using subpath exports.
 
-::: note Future Roadmap Considerations
+::: info Future Roadmap Considerations
 In future releases, extended time handling or modular plugins (such as date-time formatters or time-zone converters) may be introduced as separate classes or extension plugins to maintain a lightweight core.
 :::

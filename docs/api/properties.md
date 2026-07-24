@@ -4,15 +4,15 @@ All instance properties on `BanglaCalendar` are read-only.
 
 ## Property Index
 
-| Property | Type | Description |
-| -------- | ---- | ----------- |
-| [`variant`](#variant) | `BnCalendarVariant` | Calendar variant in use (`'revised-2019'` or `'revised-1966'`). |
-| [`year`](#year) | `{ bn: BanglaYear; en: number; }` | Bengali year representation in both Bangla and Latin digits. |
-| [`month`](#month) | `{ bn: BanglaMonth; en: NumberRange<1, 12>; }` | Bengali month representation in both Bangla and Latin digits. |
-| [`date`](#date) | `{ bn: BanglaDate; en: NumberRange<1, 31>; }` | Bengali day of month representation in both Bangla and Latin digits. |
-| [`gregorian`](#gregorian) | `{ year: number; month: NumberRange<1, 12>; date: NumberRange<1, 31>; }` | Equivalent Gregorian calendar year, month, and date. |
-| [`weekDay`](#weekday) | `Enumerate<7>` | Day of week index (`0-6`, 0 = Sunday / রবিবার). |
-| [`isoWeekDay`](#isoweekday) | `NumberRange<1, 7>` | ISO 8601 day of week index (`1-7`, 1 = Monday, 7 = Sunday). |
+| Property                    | Type                                         | Description                                                          |
+| --------------------------- | -------------------------------------------- | -------------------------------------------------------------------- |
+| [`variant`](#variant)       | `BnCalendarVariant`                          | Calendar variant in use (`'revised-2019'` or `'revised-1966'`).      |
+| [`year`](#year)             | `{ bn: BanglaYear; en: number; }`            | Bengali year representation in both Bangla and Latin digits.         |
+| [`month`](#month)           | `{ bn: BanglaMonth; en: 1-12; }`             | Bengali month representation in both Bangla and Latin digits.        |
+| [`date`](#date)             | `{ bn: BanglaDate; en: 1-31; }`              | Bengali day of month representation in both Bangla and Latin digits. |
+| [`gregorian`](#gregorian)   | `{ year: number; month: 1-12; date: 1-31; }` | Equivalent Gregorian calendar year, month, and date.                 |
+| [`weekDay`](#weekday)       | `0-6`                                        | Day of week index (`0-6`, 0 = Sunday / রবিবার).                      |
+| [`isoWeekDay`](#isoweekday) | `1-7`                                        | ISO 8601 day of week index (`1-7`, 1 = Monday, 7 = Sunday).          |
 
 ---
 

@@ -8,11 +8,11 @@ To accommodate different naming conventions and developer preferences, `bn-calen
 import { BanglaCalendar, BnCalendar, Bongabdo } from 'bn-calendar';
 ```
 
-| Export Name | Description |
-| ----------- | ----------- |
-| `BanglaCalendar` | Primary export class name. |
-| `BnCalendar` | Shorthand alias. Identical reference to `BanglaCalendar`. |
-| `Bongabdo` | Traditional Bengali calendar name (বঙ্গাব্দ). Identical reference to `BanglaCalendar`. |
+| Export Name      | Description                                                                            |
+| ---------------- | -------------------------------------------------------------------------------------- |
+| `BanglaCalendar` | Primary export class name.                                                             |
+| `BnCalendar`     | Shorthand alias. Identical reference to `BanglaCalendar`.                              |
+| `Bongabdo`       | Traditional Bengali calendar name (বঙ্গাব্দ). Identical reference to `BanglaCalendar`. |
 
 ## Code Examples
 

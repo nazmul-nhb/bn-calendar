@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: "Bangla Calendar"
-  text: "Bengali Calendar System for JavaScript & TypeScript"
-  tagline: Seamless date creation, bidirectional Gregorian conversion, multiple variants & digit utilities with zero dependencies.
+  text: "Comprehensive Bengali Calendar System Library"
+  tagline: "Built for any JavaScript and TypeScript environment"
   image:
     src: /bn-calendar.png
     alt: Bangla Calendar Logo
@@ -15,12 +15,9 @@ hero:
     - theme: alt
       text: API Reference
       link: /api/constructor
-    - theme: alt
-      text: GitHub
-      link: https://github.com/nazmul-nhb/bn-calendar
 
 features:
-  - icon: 🔄
+  - icon: cycle
     title: Bidirectional Conversion
     details: Effortlessly convert dates between Bengali and Gregorian calendar systems with accurate leap year logic.
   - icon: 📜

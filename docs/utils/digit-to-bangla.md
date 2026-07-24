@@ -24,13 +24,13 @@ digitToBangla(
 
 ## Behavior Matrix
 
-| Input Condition | `preserveNonDigit = true` (Default) | `preserveNonDigit = false` |
-| --------------- | ----------------------------------- | -------------------------- |
-| Number | Returns Bangla digits (e.g. `"১২৩"`) | Returns Bangla digits (e.g. `"১২৩"`) |
-| String with only digits | Returns Bangla digits | Returns Bangla digits |
-| String with mixed characters | Converts digits, preserves text | Converts digits, strips text |
-| Empty string (`""`) | Returns empty string (`""`) | Returns empty string (`""`) |
-| Non-numeric string | Returns original string | Returns empty string (`""`) |
+| Input Condition              | `preserveNonDigit = true` (Default)  | `preserveNonDigit = false`           |
+| ---------------------------- | ------------------------------------ | ------------------------------------ |
+| Number                       | Returns Bangla digits (e.g. `"১২৩"`) | Returns Bangla digits (e.g. `"১২৩"`) |
+| String with only digits      | Returns Bangla digits                | Returns Bangla digits                |
+| String with mixed characters | Converts digits, preserves text      | Converts digits, strips text         |
+| Empty string (`""`)          | Returns empty string (`""`)          | Returns empty string (`""`)          |
+| Non-numeric string           | Returns original string              | Returns empty string (`""`)          |
 
 ## Code Examples
 
