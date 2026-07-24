@@ -2,6 +2,8 @@
 
 > Comprehensive Bengali calendar system library built for any JavaScript and TypeScript environment.
 
+[![Bangla Calendar](https://raw.githubusercontent.com/nazmul-nhb/locality-idb/refs/heads/main/bn-calendar.png)](https://bncal.nazmul-nhb.dev/)
+
 <p>
   <!-- Package Info -->
   <a href="https://www.npmjs.com/package/bn-calendar" aria-label="NPM Downloads">

@@ -2,7 +2,15 @@
 	"$schema": "https://biomejs.dev/schemas/2.5.5/schema.json",
 	"vcs": { "enabled": true, "clientKind": "git", "useIgnoreFile": false },
 	"files": {
-		"includes": ["**", "!!**/dist", "!!**/node_modules", "!!__dump__", "!!__ideas__"],
+		"includes": [
+			"**",
+			"!!**/docs/.vitepress/cache",
+			"!!**/docs/.vitepress/dist",
+			"!!**/dist",
+			"!!**/node_modules",
+			"!!__dump__",
+			"!!__ideas__"
+		],
 		"ignoreUnknown": true
 	},
 	"formatter": {
@@ -17,7 +25,15 @@
 		"bracketSpacing": true,
 		"expand": "auto",
 		"useEditorconfig": true,
-		"includes": ["**", "!**/dist", "!**/node_modules", "!**/.estimator", "!**/*.md"]
+		"includes": [
+			"**",
+			"!**/dist",
+			"!**/node_modules",
+			"!!**/docs/.vitepress/cache",
+			"!!**/docs/.vitepress/dist",
+			"!**/.estimator",
+			"!**/*.md"
+		]
 	},
 	"linter": {
 		"enabled": true,
@@ -128,6 +144,8 @@
 			"**",
 			"!node_modules/*",
 			"!dist/*",
+			"!!**/docs/.vitepress/cache",
+			"!!**/docs/.vitepress/dist",
 			"!coverage/*",
 			"!**/*.test.ts",
 			"!**/__tests__/**/*",
