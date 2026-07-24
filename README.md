@@ -1650,20 +1650,26 @@ type BnDigitResult<Force extends boolean> = Force extends true ? number : string
 ## 🔗 Related Packages
 
 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-  <a target="_blank" href="https://www.npmjs.com/package/nhb-toolbox">
-    <img src="https://img.shields.io/badge/Utility_Library-nhb--toolbox-blue" alt="nhb-toolbox" />
+  <a target="_blank" href="https://www.npmjs.com/package/toolbox-x">
+    <img src="https://img.shields.io/badge/Utility_Library-toolbox--x-blue" alt="toolbox-x" />
   </a>
 </div>
 
 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-  <a target="_blank" href="https://www.npmjs.com/package/nhb-hooks">
-    <img src="https://img.shields.io/badge/React_Hooks-nhb--hooks-blue" alt="nhb-hooks" />
+  <a target="_blank" href="https://www.npmjs.com/package/chronos-date">
+    <img src="https://img.shields.io/badge/Date--Time_Library-chronos--date-green" alt="chronos-date" />
   </a>
 </div>
 
 <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
   <a target="_blank" href="https://www.npmjs.com/package/locality-idb">
     <img src="https://img.shields.io/badge/IndexedDB_ORM-locality--idb-darkviolet" alt="locality-idb" />
+  </a>
+</div>
+
+<div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+  <a target="_blank" href="https://www.npmjs.com/package/nhb-hooks">
+    <img src="https://img.shields.io/badge/React_Hooks-nhb--hooks-blue" alt="nhb-hooks" />
   </a>
 </div>
 
