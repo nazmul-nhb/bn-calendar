@@ -15,15 +15,79 @@ export default defineConfig({
 
 		nav: [
 			{ text: 'Home', link: '/' },
-			{ text: 'Examples', link: '/markdown-examples' },
+			{ text: 'Getting Started', link: '/getting-started/installation' },
+			{ text: 'Guide', link: '/guide/creating-dates' },
+			{ text: 'API Reference', link: '/api/constructor' },
+			{ text: 'Utilities', link: '/utils/overview' },
+			{ text: 'Examples', link: '/examples/basic' },
 		],
 
 		sidebar: [
 			{
-				text: 'Examples',
+				text: 'Getting Started',
+				collapsed: false,
 				items: [
-					{ text: 'Markdown Examples', link: '/markdown-examples' },
-					{ text: 'Runtime API Examples', link: '/api-examples' },
+					{ text: 'Installation', link: '/getting-started/installation' },
+					{ text: 'Quick Start', link: '/getting-started/quick-start' },
+					{ text: 'Calendar Variants', link: '/getting-started/calendar-variants' },
+					{ text: 'Pros & Cons', link: '/getting-started/pros-and-cons' },
+					{ text: 'Formatting', link: '/getting-started/formatting' },
+				],
+			},
+			{
+				text: 'Guide',
+				collapsed: false,
+				items: [
+					{ text: 'Creating Dates', link: '/guide/creating-dates' },
+					{ text: 'Conversion', link: '/guide/conversion' },
+					{ text: 'Formatting', link: '/guide/formatting' },
+					{ text: 'Manipulation', link: '/guide/manipulation' },
+					{ text: 'Localization', link: '/guide/localization' },
+					{ text: 'Utilities', link: '/guide/utilities' },
+					{ text: 'Examples', link: '/guide/examples' },
+				],
+			},
+			{
+				text: 'API Reference',
+				collapsed: false,
+				items: [
+					{ text: 'Constructor', link: '/api/constructor' },
+					{ text: 'Properties', link: '/api/properties' },
+					{ text: 'Formatting', link: '/api/formatting' },
+					{ text: 'Getters', link: '/api/getters' },
+					{ text: 'Manipulation', link: '/api/manipulation' },
+					{ text: 'Serialization', link: '/api/serialization' },
+					{ text: 'Validation', link: '/api/validation' },
+					{ text: 'Symbols', link: '/api/symbols' },
+					{ text: 'Aliases', link: '/api/aliases' },
+					{ text: 'Types', link: '/api/types' },
+				],
+			},
+			{
+				text: 'Utilities',
+				collapsed: false,
+				items: [
+					{ text: 'Overview', link: '/utils/overview' },
+					{ text: 'banglaToDigit()', link: '/utils/bangla-to-digit' },
+					{ text: 'digitToBangla()', link: '/utils/digit-to-bangla' },
+				],
+			},
+			{
+				text: 'Examples',
+				collapsed: false,
+				items: [
+					{ text: 'Basic Usage', link: '/examples/basic' },
+					{ text: 'Conversion', link: '/examples/conversion' },
+					{ text: 'Formatting', link: '/examples/formatting' },
+					{ text: 'Calculations', link: '/examples/calculations' },
+				],
+			},
+			{
+				text: 'More',
+				collapsed: true,
+				items: [
+					{ text: 'Changelog', link: '/changelog' },
+					{ text: 'License', link: '/license' },
 				],
 			},
 		],
