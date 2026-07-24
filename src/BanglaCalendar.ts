@@ -859,7 +859,7 @@ export class BanglaCalendar {
 			DD: _padShunno(date.bn),
 			Do: date.bn,
 			S: seasonName,
-			SS: seasonName + 'কাল',
+			SS: `${seasonName}কাল`,
 		};
 
 		return _formatDateCore(format || 'ddd, DD mmmm (SS), YYYY বঙ্গাব্দ', dateComponents);
