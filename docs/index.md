@@ -25,4 +25,3 @@ features:
   - title: Multiple Variants
     details: Full support for both `'revised-2019'` (official Bangladesh calendar) and `'revised-1966'` leap year rules.
 ---
-

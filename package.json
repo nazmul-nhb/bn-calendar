@@ -58,7 +58,12 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"files": ["dist", "LICENSE", "README.md", "package.json"],
+	"files": [
+		"dist",
+		"LICENSE",
+		"README.md",
+		"package.json"
+	],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/nazmul-nhb/bn-calendar.git"
@@ -96,7 +101,8 @@
 		"toolbox-x": "2.6.16",
 		"tsdown": "^0.22.14",
 		"typescript": "^6.0.3",
-		"vitepress": "2.0.0-alpha.18"
+		"vitepress": "2.0.0-alpha.18",
+		"vitepress-plugin-group-icons": "^1.7.5"
 	},
 	"lint-staged": {
 		"*.+((c|m)?js(x)?|(c|m)?ts(x)?)": [
