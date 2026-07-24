@@ -4,8 +4,11 @@ layout: home
 
 hero:
   name: "Bangla Calendar"
-  text: "Comprehensive Bengali calendar system library built for any JavaScript and TypeScript environment."
-  tagline: My great project tagline
+  text: "Comprehensive Bengali calendar system library"
+  tagline: "Built for any JavaScript and TypeScript environment"
+  image:
+    src: /bn-calendar.png
+    alt: Bangla Calendar
   actions:
     - theme: brand
       text: Markdown Examples
@@ -15,11 +18,11 @@ hero:
       link: /api-examples
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Bidirectional Conversion
+    details: Seamlessly convert dates between Gregorian and Bengali calendar systems.
+  - title: Lightweight & Fast
+    details: Zero dependencies, fully tree-shakable, and optimized for performance.
+  - title: Multiple Variants
+    details: Full support for both `'revised-2019'` (official Bangladesh calendar) and `'revised-1966'` leap year rules.
 ---
 

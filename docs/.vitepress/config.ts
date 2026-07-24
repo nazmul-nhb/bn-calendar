@@ -11,6 +11,7 @@ export default defineConfig({
 	// https://vitepress.dev/reference/default-theme-config
 	themeConfig: {
 		logo: { src: '/icon.png', alt: 'Bangla Calendar Logo' },
+
 		nav: [
 			{ text: 'Home', link: '/' },
 			{ text: 'Examples', link: '/markdown-examples' },
