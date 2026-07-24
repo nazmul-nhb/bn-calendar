@@ -6,11 +6,11 @@ export default defineConfig({
 	description:
 		'Comprehensive Bengali calendar system library built for any JavaScript and TypeScript environment.',
 
-	head: [['link', { rel: 'icon', href: '/icon.png' }]],
+	head: [['link', { rel: 'icon', href: './icon.png' }]],
 
 	// https://vitepress.dev/reference/default-theme-config
 	themeConfig: {
-		logo: { src: '/icon.png', alt: 'Bangla Calendar Logo' },
+		logo: { src: './icon.png', alt: 'Bangla Calendar Logo' },
 
 		nav: [
 			{ text: 'Home', link: '/' },

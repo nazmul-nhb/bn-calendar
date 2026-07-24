@@ -7,7 +7,7 @@ hero:
   text: "Comprehensive Bengali calendar system library"
   tagline: "Built for any JavaScript and TypeScript environment"
   image:
-    src: /bn-calendar.png
+    src: ./bn-calendar.png
     alt: Bangla Calendar
   actions:
     - theme: brand
