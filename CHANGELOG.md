@@ -4,6 +4,13 @@ All notable changes to **bn-calendar** will be documented in this file.
 
 > Auto-generated from git history using [changelog-maker](https://github.com/nodejs/changelog-maker).
 
+## [v1.2.11](https://github.com/nazmul-nhb/bn-calendar/releases/tag/v1.2.11) — 2026-07-25
+
+[Compare changes](https://github.com/nazmul-nhb/bn-calendar/compare/v1.2.10...v1.2.11)
+
+* \[[`944b2f1e4b`](https://github.com/nazmul-nhb/bn-calendar/commit/944b2f1e4b)] - 📚 docs: added info about immutability (Nazmul Hassan)
+* \[[`e315fe6f50`](https://github.com/nazmul-nhb/bn-calendar/commit/e315fe6f50)] - 🔧 update(docs): updated changelog and fixed dead links (Nazmul Hassan)
+
 ## [v1.2.10](https://github.com/nazmul-nhb/bn-calendar/releases/tag/v1.2.10) — 2026-07-25
 
 [Compare changes](https://github.com/nazmul-nhb/bn-calendar/compare/v1.2.6...v1.2.10)
