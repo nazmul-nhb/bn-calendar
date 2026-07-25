@@ -19,7 +19,7 @@
 		"changelog": "node scripts/generate-changelog.mjs",
 		"prepare": "husky",
 		"dev": "vitepress dev docs",
-		"build:docs": "node scripts/generate-changelog.mjs && vitepress build docs",
+		"build:docs": "git fetch --unshallow --tags 2>/dev/null || git fetch --tags && node scripts/generate-changelog.mjs && vitepress build docs",
 		"preview": "vitepress preview docs"
 	},
 	"keywords": [
