@@ -47,6 +47,14 @@ pnpm add bn-calendar
 yarn add bn-calendar
 ```
 
+```bash [bun]
+bun add bn-calendar
+```
+
+```bash [deno]
+bun add npm:bn-calendar
+```
+
 :::
 
 ## Quick Example
@@ -68,13 +76,3 @@ console.log(date.toJSON());
 console.log(date.format('dd, DD mmmm (SS), YYYY বঙ্গাব্দ'));
 // Output: "শু, ০৮ ফাল্গুন (বসন্ত), ১৪৩২ বঙ্গাব্দ"
 ```
-
-## Features Overview
-
-- **Bidirectional Conversion**: Seamlessly convert dates between Gregorian and Bengali calendar systems.
-- **Multiple Variants**: Full support for both `'revised-2019'` (official Bangladesh calendar) and `'revised-1966'` leap year rules.
-- **Rich API**: Extensive methods for date manipulation, formatting, and calculations.
-- **Universal Utilities**: Handy standalone functions (`banglaToDigit`, `digitToBangla`) to handle conversion between Bangla (`০-৯`) and Latin (`0-9`) digits.
-- **Lightweight & Fast**: Zero dependencies, fully tree-shakable, and optimized for high performance.
-- **Universal Compatibility**: Works seamlessly in Node.js, browsers, Deno, Bun, and all JS/TS runtimes.
-- **Type-Safe**: Written in TypeScript with comprehensive type definitions.

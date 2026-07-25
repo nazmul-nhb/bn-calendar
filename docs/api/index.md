@@ -4,37 +4,39 @@ Creates a new `BanglaCalendar` instance from various input types and date compon
 
 ## Signatures
 
+The constructor supports multiple overloads to accommodate different input formats. A `BanglaCalendar` instance can be created from:
+
 ::: code-group
 
-```typescript [Signature 1: Current Date]
+```typescript [Current Date]
 constructor(config?: BnCalendarConfig)
 ```
 
-```typescript [Signature 2: Date String]
+```typescript [Dates]
+// From Gregorian or Bangla date string
 constructor(date: string, config?: BnCalendarConfig)
-```
 
-```typescript [Signature 3: JS Date Object]
+// From JS Date object
 constructor(date: Date, config?: BnCalendarConfig)
 ```
 
-```typescript [Signature 4: Timestamp / Latin Year]
+```typescript [Timestamp or Year]
+// From Unix timestamp (in milliseconds) or Bangla year in Latin digits (0-9999)
 constructor(tsOrBnYear: number, config?: BnCalendarConfig)
-```
 
-```typescript [Signature 5: Bangla Year String]
+// From Bangla year in Bangla digits (০-৯৯৯৯)
 constructor(bnYear: BanglaYear, config?: BnCalendarConfig)
 ```
 
-```typescript [Signature 6: Year & Month (Latin)]
+```typescript [Year & Month]
+// From Bangla year and month in Latin digits
 constructor(
   bnYear: number,
   bnMonth: NumberRange<1, 12>,
   config?: BnCalendarConfig
 )
-```
 
-```typescript [Signature 7: Year & Month (Bangla)]
+// From Bangla year and month in Bangla digits
 constructor(
   bnYear: BanglaYear,
   bnMonth: BanglaMonth,
@@ -42,16 +44,16 @@ constructor(
 )
 ```
 
-```typescript [Signature 8: Year, Month & Date (Latin)]
+```typescript [Year, Month & Date]
+// From Bangla year, month, and date in Latin digits
 constructor(
   bnYear: number,
   bnMonth: NumberRange<1, 12>,
   bnDate: NumberRange<1, 31>,
   config?: BnCalendarConfig
 )
-```
 
-```typescript [Signature 9: Year, Month & Date (Bangla)]
+// From Bangla year, month, and date in Bangla digits
 constructor(
   bnYear: BanglaYear,
   bnMonth: BanglaMonth,
@@ -64,14 +66,14 @@ constructor(
 
 ## Parameters
 
-| Parameter    | Type                   | Description                                                                                         |
-| ------------ | ---------------------- | --------------------------------------------------------------------------------------------------- |
-| `date`       | `string \| Date`       | Bangla date string (`"১৪৩০-০১-০১"`), Gregorian date string (`"2023-04-14"`), or JS `Date` instance. |
-| `tsOrBnYear` | `number`               | Unix timestamp (in milliseconds) or Bangla year in Latin digits (0-9999).                           |
-| `bnYear`     | `number \| BanglaYear` | Bengali year in either Latin digits (`0-9999`) or Bangla digits (`০-৯৯৯৯`).                         |
-| `bnMonth`    | `1-12 \| BanglaMonth`  | Bengali month number (`1-12`) or Bangla month string (`১-১২`). Defaults to month `1` if omitted.    |
-| `bnDate`     | `1-31 \| BanglaDate`   | Bengali day of month (`1-31`) or Bangla date string (`১-৩১`). Defaults to day `1` if omitted.       |
-| `config`     | `BnCalendarConfig`     | Optional configuration object containing `variant: 'revised-2019' \| 'revised-1966'`.               |
+| Parameter    | Type                   | Description                                                                                |
+| ------------ | ---------------------- | ------------------------------------------------------------------------------------------ |
+| `date`       | `string \| Date`       | Date strings (Bangla: `"১৪৩০-০১-০১"`), (Gregorian: `"2023-04-14"`), or JS `Date` instance. |
+| `tsOrBnYear` | `number`               | Unix timestamp (in milliseconds) or Bangla year in Latin digits (0-9999).                  |
+| `bnYear`     | `number \| BanglaYear` | Bengali year in either Latin digits (`0-9999`) or Bangla digits (`০-৯৯৯৯`).                |
+| `bnMonth`    | `1-12 \| BanglaMonth`  | Bengali month number (`1-12`) or Bangla month string (`১-১২`). Defaults to month `1`.      |
+| `bnDate`     | `1-31 \| BanglaDate`   | Bengali day of month (`1-31`) or Bangla date string (`১-৩১`). Defaults to day `1`.         |
+| `config`     | `BnCalendarConfig`     | Optional configuration object containing `variant: 'revised-2019' \| 'revised-1966'`.      |
 
 ## Overload Resolution & Behavior
 

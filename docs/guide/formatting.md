@@ -72,6 +72,6 @@ console.log(date.format('[তারিখ:] DD mmmm, YYYY [বঙ্গাব্
 
 ::: tip Related API Documentation
 
-- [Formatting API Reference](../api/formatting.md) - Complete parameter specifications and token list.
-- [Getters API Reference](../api/getters.md) - Direct getters for month, day, and season names.
+- [Formatting API Reference](../api/formatting) - Complete parameter specifications and token list.
+- [Getters API Reference](../api/getters) - Direct getters for month, day, and season names.
 :::

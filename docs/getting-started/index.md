@@ -24,6 +24,10 @@ yarn add bn-calendar
 bun add bn-calendar
 ```
 
+```bash [deno]
+bun add npm:bn-calendar
+```
+
 :::
 
 ## Importing in Your Project

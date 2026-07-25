@@ -50,7 +50,7 @@ console.log(cal1966.variant); // 'revised-1966'
 
 ::: tip Next Steps
 
-- Learn how to create dates in depth: [Creating Dates](../guide/creating-dates.md)
-- Explore calendar variants: [Calendar Variants](./calendar-variants.md)
-- Check complete API docs: [Constructor API](../api/constructor.md)
+- Learn how to create dates in depth: [Creating Dates](../guide/)
+- Explore calendar variants: [Calendar Variants](./calendar-variants)
+- Check complete API docs: [Constructor API](../api/)
 :::

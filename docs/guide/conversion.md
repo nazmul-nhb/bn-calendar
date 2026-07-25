@@ -64,8 +64,8 @@ const reconstitutedDate = new Date(timestamp);
 
 ::: tip Related API Pages
 
-- [toDate() API Reference](../api/serialization.md#todate)
-- [gregorian Property API Reference](../api/properties.md#gregorian)
-- [valueOf() API Reference](../api/serialization.md#valueof)
+- [toDate() API Reference](../api/serialization#todate)
+- [gregorian Property API Reference](../api/properties#gregorian)
+- [valueOf() API Reference](../api/serialization#valueof)
 
 :::

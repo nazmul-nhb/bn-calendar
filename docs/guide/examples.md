@@ -79,8 +79,8 @@ console.log(`Boishakh 1430 has ${boishakhDays.length} days`);
 ::: tip More Examples
 Check out dedicated standalone examples:
 
-- [Basic Usage Examples](../examples/basic.md)
-- [Conversion Examples](../examples/conversion.md)
-- [Formatting Examples](../examples/formatting.md)
-- [Calculations Examples](../examples/calculations.md)
+- [Basic Usage Examples](../examples/)
+- [Conversion Examples](../examples/conversion)
+- [Formatting Examples](../examples/formatting)
+- [Calculations Examples](../examples/calculations)
 :::

@@ -86,6 +86,7 @@ console.log(date.toStringEn());
 ```
 
 ::: tip Related API
-- [Getters API Reference](../api/getters.md)
-- [Formatting API Reference](../api/formatting.md)
+
+- [Getters API Reference](../api/getters)
+- [Formatting API Reference](../api/formatting)
 :::

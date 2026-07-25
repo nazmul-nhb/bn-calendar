@@ -101,5 +101,6 @@ console.log(date.isLeapYear());    // false
 ```
 
 ::: tip Related API Pages
-- [Manipulation API Reference](../api/manipulation.md)
+
+- [Manipulation API Reference](../api/manipulation)
 :::

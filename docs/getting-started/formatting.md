@@ -51,5 +51,5 @@ console.log(date.format('[সাল:] YYYY বঙ্গাব্দ')); // "স�
 ```
 
 ::: tip Reference
-For a complete listing of all format tokens (year, month, day, weekday, season), see the [API Reference for format()](../api/formatting.md).
+For a complete listing of all format tokens (year, month, day, weekday, season), see the [API Reference for format()](../api/formatting).
 :::

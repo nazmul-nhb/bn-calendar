@@ -6,6 +6,9 @@ All notable changes to **bn-calendar** will be documented in this file.
 
 ## [Unreleased/Latest](https://github.com/nazmul-nhb/bn-calendar/compare/v1.2.6...HEAD)
 
+* \[[`d14595ade8`](https://github.com/nazmul-nhb/bn-calendar/commit/d14595ade8)] - 🔧 update(docs): updated quick start examples and homepage in package.json (Nazmul Hassan)
+* \[[`0fb6ed3fb4`](https://github.com/nazmul-nhb/bn-calendar/commit/0fb6ed3fb4)] - 🛠️ chore(package.json): updated build script (Nazmul Hassan)
+* \[[`0c81ea8f2f`](https://github.com/nazmul-nhb/bn-calendar/commit/0c81ea8f2f)] - 🔧 update(docs): added changelog and modified theme colors (Nazmul Hassan)
 * \[[`9ca9280cac`](https://github.com/nazmul-nhb/bn-calendar/commit/9ca9280cac)] - 🔧 update(docs): changed theme colors (Nazmul Hassan)
 * \[[`915a08c1e0`](https://github.com/nazmul-nhb/bn-calendar/commit/915a08c1e0)] - 🔧 update(docs): redesigned the homepage and headings (Nazmul Hassan)
 * \[[`6d37c08ed1`](https://github.com/nazmul-nhb/bn-calendar/commit/6d37c08ed1)] - 🔧 update(docs): revised docs (Nazmul Hassan)

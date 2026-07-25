@@ -72,5 +72,5 @@ console.log(digitToBangla('12ab34', false));        // "১২৩৪"
 ```
 
 ::: tip Reference
-For detailed parameter matrices, return types, and edge cases, see the [Utilities API Reference](../utils/overview.md).
+For detailed parameter matrices, return types, and edge cases, see the [Utilities API Reference](../utils/).
 :::

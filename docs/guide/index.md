@@ -88,5 +88,5 @@ const cal3 = new BanglaCalendar('১৪৩০', '১', '১', { variant: 'revise
 ```
 
 ::: tip Related API
-For full overload signatures and parameter specifications, see [Constructor API Reference](../api/constructor.md).
+For full overload signatures and parameter specifications, see [Constructor API Reference](../api/).
 :::

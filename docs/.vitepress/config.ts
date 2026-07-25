@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
+
 import { version } from '../../package.json';
 
 const npmUrl = 'https://www.npmjs.com/package/bn-calendar/';
@@ -17,11 +18,15 @@ export default defineConfig({
 		logo: { src: '/icon.png', alt: 'Bangla Calendar Logo' },
 
 		nav: [
-			{ text: 'Getting Started', link: '/getting-started/installation' },
-			{ text: 'Guide', link: '/guide/creating-dates' },
-			{ text: 'API Reference', link: '/api/constructor' },
-			{ text: 'Utilities', link: '/utils/overview' },
-			{ text: 'Examples', link: '/examples/basic' },
+			{
+				text: 'Getting Started',
+				link: '/getting-started',
+				activeMatch: '^/getting-started/',
+			},
+			{ text: 'Guide', link: '/guide', activeMatch: '^/guide/' },
+			{ text: 'API Reference', link: '/api', activeMatch: '^/api/' },
+			{ text: 'Utilities', link: '/utils', activeMatch: '^/utils/' },
+			{ text: 'Examples', link: '/examples', activeMatch: '^/examples/' },
 			{
 				text: `v${version}`,
 				items: [
@@ -36,11 +41,11 @@ export default defineConfig({
 				text: 'Getting Started',
 				collapsed: false,
 				items: [
-					{ text: 'Installation', link: '/getting-started/installation' },
+					{ text: 'Installation', link: '/getting-started/' },
 					{ text: 'Quick Start', link: '/getting-started/quick-start' },
 					{ text: 'Features', link: '/getting-started/features' },
 					{ text: 'Calendar Variants', link: '/getting-started/calendar-variants' },
-					{ text: 'Pros & Cons', link: '/getting-started/pros-and-cons' },
+					{ text: 'Design Philosophy', link: '/getting-started/design-philosophy' },
 					{ text: 'Formatting', link: '/getting-started/formatting' },
 				],
 			},
@@ -48,7 +53,7 @@ export default defineConfig({
 				text: 'Guide',
 				collapsed: false,
 				items: [
-					{ text: 'Creating Dates', link: '/guide/creating-dates' },
+					{ text: 'Creating Dates', link: '/guide/' },
 					{ text: 'Conversion', link: '/guide/conversion' },
 					{ text: 'Formatting', link: '/guide/formatting' },
 					{ text: 'Manipulation', link: '/guide/manipulation' },
@@ -61,7 +66,7 @@ export default defineConfig({
 				text: 'API Reference',
 				collapsed: false,
 				items: [
-					{ text: 'Constructor', link: '/api/constructor' },
+					{ text: 'Constructor', link: '/api/' },
 					{ text: 'Properties', link: '/api/properties' },
 					{ text: 'Formatting', link: '/api/formatting' },
 					{ text: 'Getters', link: '/api/getters' },
@@ -77,7 +82,7 @@ export default defineConfig({
 				text: 'Utilities',
 				collapsed: false,
 				items: [
-					{ text: 'Overview', link: '/utils/overview' },
+					{ text: 'Overview', link: '/utils/' },
 					{ text: 'banglaToDigit()', link: '/utils/bangla-to-digit' },
 					{ text: 'digitToBangla()', link: '/utils/digit-to-bangla' },
 				],
@@ -86,7 +91,7 @@ export default defineConfig({
 				text: 'Examples',
 				collapsed: false,
 				items: [
-					{ text: 'Basic Usage', link: '/examples/basic' },
+					{ text: 'Basic Usage', link: '/examples/' },
 					{ text: 'Conversion', link: '/examples/conversion' },
 					{ text: 'Formatting', link: '/examples/formatting' },
 					{ text: 'Calculations', link: '/examples/calculations' },
