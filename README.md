@@ -86,24 +86,32 @@ import { BanglaCalendar } from 'bn-calendar';
 > It supports two calendar variants: `'revised-2019'` (default) and `'revised-1966'`.
 
 ```typescript
-// Create from current date
+import { BanglaCalendar } from 'bn-calendar';
+
+// 1. Current date in Bangla calendar
 const today = new BanglaCalendar();
+console.log(today.toString()); 
+// Output: "শুক্রবার, ৯ ফাল্গুন, ১৪৩২ [বসন্ত]"
 
-// Create from Bangla date string (Bangla digit)
-const date0 = new BanglaCalendar('১৪৩২-১১-০৮');
+// 2. From Gregorian date string
+const date1 = new BanglaCalendar('2023-04-14');
+console.log(date1.toJSON()); 
+// Output: "১৪৩০-০১-০১"
 
-// Create from Gregorian date
-const date1 = new BanglaCalendar('2023-04-14'); // Latin digit
-const date2 = new BanglaCalendar(new Date('2023-04-14')); // Date object
+// 3. From JavaScript Date object
+const date2 = new BanglaCalendar(new Date(2023, 3, 14));
+console.log(date2.getMonthName()); 
+// Output: "বৈশাখ"
 
-// Create with specific Bangla date using Latin digits
+// 4. From specific Bangla components (Year, Month, Date)
 const date3 = new BanglaCalendar(1430, 1, 1);
+console.log(date3.toDate()); 
+// Output: Fri Apr 14 2023 00:00:00 GMT+0000
 
-// Create with specific Bangla date using Bangla digits
+// 5. Using Bangla digits directly
 const date4 = new BanglaCalendar('১৪৩০', '১', '১');
-
-// Create with specific variant
-const date5 = new BanglaCalendar('১৪৩০', '১', '১', { variant: 'revised-1966' });
+console.log(date4.toStringEn()); 
+// Output: "Shukrobar (Friday), 1 Boishakh, 1430 [Grisma (Summer)]"
 ```
 
 > Read full documentation: [bncal.nazmul-nhb.dev](https:///bncal.nazmul-nhb.dev/)

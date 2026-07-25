@@ -64,7 +64,7 @@
 		"type": "git",
 		"url": "git+https://github.com/nazmul-nhb/bn-calendar.git"
 	},
-	"homepage": "https://github.com/nazmul-nhb/bn-calendar#readme",
+	"homepage": "https://bncal.nazmul-nhb.dev",
 	"author": {
 		"name": "Nazmul Hassan",
 		"email": "nazmulnhb@gmail.com",
