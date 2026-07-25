@@ -1,5 +1,8 @@
 import { defineConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
+import { version } from '../../package.json';
+
+const npmUrl = 'https://www.npmjs.com/package/bn-calendar/';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -19,6 +22,13 @@ export default defineConfig({
 			{ text: 'API Reference', link: '/api/constructor' },
 			{ text: 'Utilities', link: '/utils/overview' },
 			{ text: 'Examples', link: '/examples/basic' },
+			{
+				text: `v${version}`,
+				items: [
+					{ link: '/changelog', text: 'Changelog' },
+					{ link: npmUrl, text: 'NPM Registry', target: '_blank', rel: 'noopener' },
+				],
+			},
 		],
 
 		sidebar: [
@@ -98,8 +108,13 @@ export default defineConfig({
 
 		socialLinks: [
 			{ icon: 'github', link: 'https://github.com/nazmul-nhb/bn-calendar/' },
-			{ icon: 'npm', link: 'https://www.npmjs.com/package/bn-calendar/' },
+			{ icon: 'npm', link: npmUrl },
 		],
+
+		editLink: {
+			text: 'View this page on GitHub',
+			pattern: 'https://github.com/nazmul-nhb/bn-calendar/blob/main/docs/:path?plain=1',
+		},
 
 		footer: {
 			message: 'Released under the Apache 2.0 License.',
@@ -112,7 +127,11 @@ export default defineConfig({
 			md.use(groupIconMdPlugin);
 		},
 	},
+
+	lastUpdated: true,
+
 	vite: {
+		server: { host: true },
 		plugins: [groupIconVitePlugin()],
 	},
 });

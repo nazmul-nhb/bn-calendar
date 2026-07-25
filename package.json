@@ -16,9 +16,10 @@
 		"lint": "biome lint --diagnostic-level=warn",
 		"fix": "biome check --write --diagnostic-level=warn",
 		"format": "biome format --write --diagnostic-level=warn",
+		"changelog": "node scripts/generate-changelog.mjs",
 		"prepare": "husky",
 		"dev": "vitepress dev docs",
-		"build:docs": "vitepress build docs",
+		"build:docs": "node scripts/generate-changelog.mjs && vitepress build docs",
 		"preview": "vitepress preview docs"
 	},
 	"keywords": [
@@ -58,12 +59,7 @@
 	"publishConfig": {
 		"access": "public"
 	},
-	"files": [
-		"dist",
-		"LICENSE",
-		"README.md",
-		"package.json"
-	],
+	"files": ["dist", "LICENSE", "README.md", "package.json"],
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/nazmul-nhb/bn-calendar.git"
