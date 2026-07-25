@@ -114,7 +114,7 @@ console.log(date4.toStringEn());
 // Output: "Shukrobar (Friday), 1 Boishakh, 1430 [Grisma (Summer)]"
 ```
 
-> Read full documentation: [bncal.nazmul-nhb.dev](https:///bncal.nazmul-nhb.dev/)
+> Read full documentation: [bncal.nazmul-nhb.dev](https://bncal.nazmul-nhb.dev/)
 
 ---
 
@@ -122,6 +122,7 @@ console.log(date4.toStringEn());
 
 - **Bidirectional Conversion**: Seamlessly convert dates between Gregorian and Bengali calendar systems.
 - **Multiple Variants**: Full support for both `'revised-2019'` (official Bangladesh calendar) and `'revised-1966'` leap year rules.
+- **Immutable by Design**: `BanglaCalendar` objects are strictly immutable. All date manipulation methods (`addDays`, `addMonths`, etc.) and `toDate()` return fresh instances/objects without side effects.
 - **Rich API**: Extensive methods for date manipulation, formatting, and calculations.
 - **Universal Utilities**: Handy functions to handle conversion between Bangla (`০-৯`) and Latin (`0-9`) digits.
 - **Lightweight & Fast**: Zero dependencies, fully tree-shakable, and optimized for performance.

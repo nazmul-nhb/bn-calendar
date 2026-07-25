@@ -4,6 +4,20 @@
 
 ---
 
+## 🔒 Immutable by Design
+
+`BanglaCalendar` is strictly **immutable**. Operations never mutate the existing instance:
+
+- **New Instances on Manipulation**: Methods like `addDays()`, `addMonths()`, `startOfMonth()`, etc., always return a brand-new `BanglaCalendar` instance.
+- **Fresh Native Objects**: Methods returning JavaScript `Date` objects (such as `toDate()`) instantiate and return a fresh `Date` object every time, preventing accidental mutations to your calendar state.
+- **Read-Only Properties**: All instance properties (`year`, `month`, `date`, `gregorian`, etc.) are read-only and frozen.
+
+::: tip Thread-Safe & Side-Effect Free
+Immutability makes `BanglaCalendar` instances safe to share across your application, state management stores (e.g. Redux, Vue Pinia, React state), and asynchronous flows without side effects.
+:::
+
+---
+
 ## 🔄 Bidirectional Calendar Conversion
 
 Seamlessly convert dates between the Gregorian (Western) calendar and the Bengali calendar system in both directions.
@@ -12,7 +26,7 @@ Seamlessly convert dates between the Gregorian (Western) calendar and the Bengal
 - **Bangla to Gregorian**: Extract native JavaScript `Date` objects (`toDate()`), Unix timestamps (`valueOf()`), or individual Gregorian date components (`gregorian.year`, `gregorian.month`, `gregorian.date`).
 
 ::: tip Round-Trip Accuracy
-Conversion is fully deterministic for date part only. Converting a Gregorian date to a Bengali date and back to Gregorian preserves the exact original date (not the time components).
+Conversion is fully deterministic. Converting a Gregorian date to a Bengali date and back to Gregorian preserves the exact original date.
 :::
 
 ---

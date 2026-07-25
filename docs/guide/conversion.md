@@ -38,6 +38,10 @@ console.log(gregorianDate.toISOString());
 // "2023-04-14T00:00:00.000Z"
 ```
 
+::: tip Immutability & Fresh Instances
+`.toDate()` always constructs and returns a **new** native `Date` instance. Mutating the returned JavaScript `Date` object (e.g. `gregorianDate.setFullYear(2025)`) will **never** alter the internal state of your `BanglaCalendar` instance.
+:::
+
 ### 2. Using `.gregorian` Property
 
 Inspect individual year, month, and date numbers:
@@ -60,6 +64,18 @@ const timestamp = bnCal.valueOf(); // 1681430400000
 
 // Can be passed directly into standard JS Date or other libraries
 const reconstitutedDate = new Date(timestamp);
+```
+
+## Round-Trip Conversion Guarantee
+
+The conversion engine is fully deterministic and bidirectional. Converting a date from Gregorian to Bangla and back to Gregorian preserves the exact date:
+
+```typescript
+const originalGregorian = new Date('2024-02-14T00:00:00.000Z');
+const bangla = new BanglaCalendar(originalGregorian);
+const convertedGregorian = bangla.toDate();
+
+console.log(originalGregorian.getTime() === convertedGregorian.getTime()); // true
 ```
 
 ::: tip Related API Pages

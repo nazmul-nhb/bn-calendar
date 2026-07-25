@@ -1,6 +1,10 @@
 # Date Manipulation
 
-`BanglaCalendar` instances are immutable when performing operations; methods like `addDays()`, `addMonths()`, `startOfMonth()` return **new** `BanglaCalendar` instances while keeping the original object intact.
+`BanglaCalendar` instances are strictly **immutable**. Every manipulation operation (`addDays()`, `addMonths()`, `startOfMonth()`, etc.) returns a **new** `BanglaCalendar` instance, leaving the original object completely untouched.
+
+::: tip Immutability Guarantee
+Whether a method returns a new `BanglaCalendar` instance or a native JavaScript `Date` object (via `.toDate()`), it always returns a fresh object. Mutating returned `Date` objects will never alter the state of your `BanglaCalendar` instance.
+:::
 
 ## Date Arithmetic
 
@@ -11,13 +15,14 @@ import { BanglaCalendar } from 'bn-calendar';
 
 const date = new BanglaCalendar('১৪৩০', '১', '১'); // 1 Boishakh 1430
 
-// Add days
+// Add days (returns a new instance)
 const future = date.addDays(7);
 console.log(future.toJSON()); // "১৪৩০-০১-০৮"
+console.log(date.toJSON());   // "১৪৩০-০১-০১" (original date remains unchanged)
 
 // Subtract days
 const past = date.addDays(-3);
-console.log(past.toJSON()); // "১৪২৯-১২-২৮" (crosses month and year boundary)
+console.log(past.toJSON());   // "১৪২৯-১২-২৮" (crosses month and year boundary)
 ```
 
 ### Adding / Subtracting Weeks (`addWeeks`)
@@ -42,12 +47,12 @@ When adding months, you can control overflow behavior when the source day does n
 const endOfAshwin = new BanglaCalendar('১৪৩০', '৬', '৩১'); // 31 Ashwin
 
 // With overflow = true (default)
-const overflowResult = endOfAshwin.addMonths(1);
-console.log(overflowResult.toJSON()); // "১৪৩০-০৮-০১" (1 Ogrohayon)
+const overflowed = endOfAshwin.addMonths(1);
+console.log(overflowed.toJSON()); // "১৪৩০-০৮-০১" (1 Ogrohayon)
 
 // With overflow = false (clamping)
-const clampedResult = endOfAshwin.addMonths(1, false);
-console.log(clampedResult.toJSON()); // "১৪৩০-০৭-৩০" (30 Kartik)
+const clamped = endOfAshwin.addMonths(1, false);
+console.log(clamped.toJSON()); // "১৪৩০-০৭-৩০" (30 Kartik)
 ```
 
 ### Adding / Subtracting Years (`addYears`)
@@ -103,4 +108,5 @@ console.log(date.isLeapYear());    // false
 ::: tip Related API Pages
 
 - [Manipulation API Reference](../api/manipulation)
+
 :::

@@ -17,15 +17,15 @@ hero:
       link: /api/
 
 features:
+  - icon: 🔒
+    title: Immutable by Design
+    details: All date manipulation methods return fresh instances/objects without side effects.
   - icon: 🔄
     title: Bidirectional Conversion
     details: Effortlessly convert dates between Bengali and Gregorian calendar systems with accurate leap year logic.
   - icon: 📜
     title: Multiple Calendar Variants
     details: Full support for both 'revised-2019' (official Bangladesh standard) and 'revised-1966' leap year rules.
-  - icon: 🔢
-    title: Digit Conversion Utilities
-    details: Exported utilities to convert between Bangla (০-৯) and Latin (0-9) digits with flexible mode toggles.
   - icon: ⚡
     title: Self-Contained & Type Safe
     details: Fully written in TypeScript, tree-shakable, lightweight, and works in Node.js, browsers, and edge environments.
