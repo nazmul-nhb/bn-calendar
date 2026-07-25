@@ -17,7 +17,7 @@ hero:
       link: /api/constructor
 
 features:
-  - icon: cycle
+  - icon: 🔄
     title: Bidirectional Conversion
     details: Effortlessly convert dates between Bengali and Gregorian calendar systems with accurate leap year logic.
   - icon: 📜
@@ -27,7 +27,7 @@ features:
     title: Digit Conversion Utilities
     details: Exported utilities to convert between Bangla (০-৯) and Latin (0-9) digits with flexible mode toggles.
   - icon: ⚡
-    title: Zero Dependencies & Type Safe
+    title: Self-Contained & Type Safe
     details: Fully written in TypeScript, tree-shakable, lightweight, and works in Node.js, browsers, and edge environments.
 ---
 

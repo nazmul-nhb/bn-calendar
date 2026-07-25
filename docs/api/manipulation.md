@@ -1,4 +1,4 @@
-# Manipulation API
+# Manipulation Methods
 
 Methods for date arithmetic, boundary queries, month length inspection, and leap year checks. All manipulation methods return **new** `BanglaCalendar` instances without mutating the original.
 

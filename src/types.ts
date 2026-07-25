@@ -17,6 +17,8 @@ import type {
 	YEAR_FORMATS,
 } from './constants';
 
+export type { BanglaDigit, DateFormatToken, NumberRange };
+
 /** Year in either 4 or 2 digits format */
 export type YearToken = (typeof YEAR_FORMATS)[number];
 /** Month in either 1 or 2 digits or 3 letters or full word format */
@@ -112,24 +114,6 @@ export type $BanglaMonthDate<Locale extends $BnEn = 'bn'> = Locale extends 'en'
 	? NumberRange<1, 31>
 	: BanglaDate;
 
-/** Represents a Bangla date object for `Chronos` plugin */
-export type BanglaDateObject<Locale extends $BnEn = 'bn'> = {
-	/** Represents Bangla year either in Bangla digit or Latin from 1-12 */
-	year: $BanglaYear<Locale>;
-	/** Represents Bangla month either in Bangla digit or Latin from 1-12 */
-	month: $BanglaMonth<Locale>;
-	/** Represents Bangla date of the month either in Bangla digit or Latin from 1-31 */
-	date: $BanglaMonthDate<Locale>;
-	/** Bangla name of the weekday either in Bangla or Latin */
-	dayName: BanglaDayName<Locale>;
-	/** Bangla name of the month either in Bangla or Latin */
-	monthName: BanglaMonthName<Locale>;
-	/** Bangla name of the season either in Bangla or Latin */
-	seasonName: BanglaSeasonName<Locale>;
-	/** Leap year status of the current year */
-	isLeapYear: boolean;
-};
-
 /** Variant of Bangla calendar system */
 export type BnCalendarVariant = keyof typeof BN_MONTH_TABLES;
 
@@ -137,10 +121,4 @@ export type BnCalendarVariant = keyof typeof BN_MONTH_TABLES;
 export interface BnCalendarConfig {
 	/** - Calendar variant to use. Defaults to `'revised-2019'`. */
 	variant?: BnCalendarVariant;
-}
-
-/** Bangla date options for `Chronos` plugin (`banglaPlugin`) */
-export interface BanglaDateOptions<Locale extends $BnEn> extends BnCalendarConfig {
-	/** - Locale to use for output values. Defaults to `'bn'`. */
-	locale?: Locale | $BnEn;
 }

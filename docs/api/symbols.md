@@ -1,4 +1,5 @@
-# Symbols API
+<!-- markdownlint-disable-file MD024 -->
+# Symbol Methods
 
 `BanglaCalendar` implements standard JavaScript well-known symbols for object coercions and string tags.
 

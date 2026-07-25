@@ -9,7 +9,7 @@ import {
 } from './constants';
 import type { $BnEn, BanglaSeasonName, BnCalendarVariant } from './types';
 
-/** Core formatting logic shared by `formatDate` and `Chronos`, `BanglaCalendar` classes */
+/** Core formatting logic shared by `BanglaCalendar` and possible future implementation */
 export function _formatDateCore(format: string, dateComponents: Record<string, string>) {
 	const tokenRegex = new RegExp(`^(${SORTED_TIME_FORMATS.join('|')})`);
 

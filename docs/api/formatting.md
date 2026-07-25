@@ -1,15 +1,15 @@
 <!-- markdownlint-disable-file MD024 -->
-# Formatting API
+# Formatting Methods
 
 Methods for converting `BanglaCalendar` instances into formatted string representations.
 
 ## Method Overview
 
-| Method                        | Description                                                                                              |
-| ----------------------------- | -------------------------------------------------------------------------------------------------------- |
-| [`format()`](#format)         | Formats date using token patterns. Default: `'ddd, DD mmmm (SS), YYYY বঙ্গাব্দ'`                         |
-| [`toString()`](#tostring)     | Formats date as full Bengali string. Output: `"Friday, 1 Boishakh, 1430 [Grisma]"` in Bangla script.     |
-| [`toStringEn()`](#tostringen) | Formats date as full English string. Output: `"Shukrobar (Friday), 1 Boishakh, 1430 [Grisma (Summer)]"`. |
+| Method                        | Description                                                                                         |
+| ----------------------------- | --------------------------------------------------------------------------------------------------- |
+| [`format()`](#format)         | Formats using token patterns. Default: `'ddd, DD mmmm (SS), YYYY বঙ্গাব্দ'`                         |
+| [`toString()`](#tostring)     | Formats as full Bengali string. Output: `"Friday, 1 Boishakh, 1430 [Grisma]"` in Bangla script.     |
+| [`toStringEn()`](#tostringen) | Formats as full English string. Output: `"Shukrobar (Friday), 1 Boishakh, 1430 [Grisma (Summer)]"`. |
 
 ---
 

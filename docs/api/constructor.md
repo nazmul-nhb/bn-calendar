@@ -1,4 +1,4 @@
-# Constructor API
+# Constructor
 
 Creates a new `BanglaCalendar` instance from various input types and date component patterns.
 

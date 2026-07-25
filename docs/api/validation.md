@@ -1,4 +1,4 @@
-# Validation API
+# Validation Methods
 
 Static type guards and validation methods exposed on the `BanglaCalendar` class, as well as instance validation helpers.
 

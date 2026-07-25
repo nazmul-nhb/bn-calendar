@@ -1,14 +1,15 @@
-# Serialization API
+<!-- markdownlint-disable-file MD024 -->
+# Serialization Methods
 
 Methods for converting `BanglaCalendar` instances to JavaScript native `Date` objects, ISO-like JSON strings, and numeric timestamps.
 
 ## Method Overview
 
-| Method | Signature | Return Type | Description |
-| ------ | --------- | ----------- | ----------- |
-| [`toDate()`](#todate) | `toDate(): Date` | `Date` | Converts Bangla date to equivalent native JavaScript Gregorian `Date` object. |
-| [`toJSON()`](#tojson) | `toJSON(): string` | `string` | Serializes instance as `"YYYY-MM-DD"` string in Bangla digits. |
-| [`valueOf()`](#valueof) | `valueOf(): number` | `number` | Returns numeric Unix timestamp in milliseconds. |
+| Method                  | Return Type | Description                                                                   |
+| ----------------------- | ----------- | ----------------------------------------------------------------------------- |
+| [`toDate()`](#todate)   | `Date`      | Converts Bangla date to equivalent native JavaScript Gregorian `Date` object. |
+| [`toJSON()`](#tojson)   | `string`    | Serializes instance as `"YYYY-MM-DD"` string in Bangla digits.                |
+| [`valueOf()`](#valueof) | `number`    | Returns numeric Unix timestamp in milliseconds.                               |
 
 ---
 

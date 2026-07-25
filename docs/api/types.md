@@ -14,6 +14,16 @@ Supported locale codes for Bangla calendar string outputs.
 
 ---
 
+### `BanglaDigit`
+
+```typescript
+type BanglaDigit = '০' | '১' | '২' | '৩' | '৪' | '৫' | '৬' | '৭' | '৮' | '৯';
+```
+
+Represents Bangla digits from `'০'` to `'৯'`.
+
+---
+
 ### `BanglaYear`
 
 ```typescript
@@ -114,21 +124,3 @@ type BanglaSeasonName<Locale extends $BnEn = 'bn'> = (typeof BN_SEASONS)[number]
 ```
 
 Union of valid season names for given locale.
-
----
-
-### `BanglaDateObject`
-
-```typescript
-type BanglaDateObject<Locale extends $BnEn = 'bn'> = {
-  year: $BanglaYear<Locale>;
-  month: $BanglaMonth<Locale>;
-  date: $BanglaMonthDate<Locale>;
-  dayName: BanglaDayName<Locale>;
-  monthName: BanglaMonthName<Locale>;
-  seasonName: BanglaSeasonName<Locale>;
-  isLeapYear: boolean;
-}
-```
-
-Bangla date details object structure (used in Chronos plugin integrations).

@@ -94,7 +94,6 @@ export default defineConfig({
 
 		search: {
 			provider: 'local',
-			options: { detailedView: true },
 		},
 
 		socialLinks: [

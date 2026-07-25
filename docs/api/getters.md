@@ -1,5 +1,5 @@
 <!-- markdownlint-disable-file MD024 -->
-# Getters API
+# Getters Methods
 
 Methods for retrieving localized names for month, day of week, and season.
 
