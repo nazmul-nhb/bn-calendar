@@ -11,10 +11,10 @@ hero:
   actions:
     - theme: brand
       text: Get Started
-      link: /getting-started/installation
+      link: /getting-started/
     - theme: alt
       text: API Reference
-      link: /api/constructor
+      link: /api/
 
 features:
   - icon: 🔄

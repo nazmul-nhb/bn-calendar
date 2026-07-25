@@ -4,8 +4,11 @@ All notable changes to **bn-calendar** will be documented in this file.
 
 > Auto-generated from git history using [changelog-maker](https://github.com/nodejs/changelog-maker).
 
-## [Unreleased/Latest](https://github.com/nazmul-nhb/bn-calendar/compare/v1.2.6...HEAD)
+## [v1.2.10](https://github.com/nazmul-nhb/bn-calendar/releases/tag/v1.2.10) — 2026-07-25
 
+[Compare changes](https://github.com/nazmul-nhb/bn-calendar/compare/v1.2.6...v1.2.10)
+
+* \[[`cac99c25d4`](https://github.com/nazmul-nhb/bn-calendar/commit/cac99c25d4)] - 🧼 refactor(docs): updated navigation items and organized examples (Nazmul Hassan)
 * \[[`d14595ade8`](https://github.com/nazmul-nhb/bn-calendar/commit/d14595ade8)] - 🔧 update(docs): updated quick start examples and homepage in package.json (Nazmul Hassan)
 * \[[`0fb6ed3fb4`](https://github.com/nazmul-nhb/bn-calendar/commit/0fb6ed3fb4)] - 🛠️ chore(package.json): updated build script (Nazmul Hassan)
 * \[[`0c81ea8f2f`](https://github.com/nazmul-nhb/bn-calendar/commit/0c81ea8f2f)] - 🔧 update(docs): added changelog and modified theme colors (Nazmul Hassan)
