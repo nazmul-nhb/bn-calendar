@@ -5,10 +5,7 @@ Converts strings containing Bangla digits (`০-৯`) into Latin numbers or stri
 ## Signature
 
 ```typescript
-banglaToDigit<Force extends boolean = true>(
-  bnDigit: string,
-  forceNumber?: Force
-): BnDigitResult<Force>
+banglaToDigit<Force extends boolean = true>(bnDigit: string, forceNumber?: Force): BnDigitResult<Force>
 ```
 
 ## Parameters
@@ -34,7 +31,7 @@ banglaToDigit<Force extends boolean = true>(
 
 ## Code Examples
 
-```typescript
+```typescript twoslash
 import { banglaToDigit } from 'bn-calendar/utils';
 
 // 1. Default Behavior (forceNumber = true)

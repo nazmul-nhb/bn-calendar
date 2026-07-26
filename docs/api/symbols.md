@@ -24,18 +24,17 @@ Enables native JavaScript primitive conversion when an instance is used in arith
 
 ### Code Examples
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const bnCal = new BanglaCalendar('১৪৩০', '১', '১');
 
 // 1. Implicit String Context
-String(bnCal); // "১৪৩০-০১-০১"
-`${bnCal}`;    // "১৪৩০-০১-০১"
+const str1 = String(bnCal); // "১৪৩০-০১-০১"
+const str2 = `${bnCal}`;    // "১৪৩০-০১-০১"
 
 // 2. Implicit Numeric Context
-+bnCal;        // 1681430400000
-bnCal * 1;     // 1681430400000
+const num = +bnCal;        // 1681430400000
 
 // 3. Explicit Symbol Call
 bnCal[Symbol.toPrimitive]('number');  // 1681430400000

@@ -85,7 +85,7 @@ constructor(
 
 ## Code Examples
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 // Current date

@@ -16,7 +16,7 @@ import { BanglaCalendar, BnCalendar, Bongabdo } from 'bn-calendar';
 
 ## Code Examples
 
-```typescript
+```typescript twoslash
 import { BnCalendar, Bongabdo } from 'bn-calendar';
 
 // Using BnCalendar shorthand alias

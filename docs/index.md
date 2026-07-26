@@ -59,7 +59,7 @@ bun add npm:bn-calendar
 
 ## Quick Example
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 // Current date in Bangla calendar

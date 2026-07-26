@@ -1,3 +1,4 @@
+import { transformerTwoslash } from '@shikijs/vitepress-twoslash';
 import { defineConfig } from 'vitepress';
 import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons';
 
@@ -128,9 +129,11 @@ export default defineConfig({
 	},
 
 	markdown: {
-		config(md) {
+		config: (md) => {
 			md.use(groupIconMdPlugin);
 		},
+
+		codeTransformers: [transformerTwoslash()],
 	},
 
 	lastUpdated: true,

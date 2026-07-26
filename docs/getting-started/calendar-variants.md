@@ -61,7 +61,7 @@ The two variants differ in how month lengths are distributed and how leap years 
 
 You can specify the variant when instantiating `BanglaCalendar` using a configuration object:
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 // Using default 2019 variant

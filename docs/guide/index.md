@@ -8,7 +8,7 @@
 
 Calling the constructor without arguments creates an instance representing today's date in the Bangla calendar:
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const today = new BanglaCalendar();

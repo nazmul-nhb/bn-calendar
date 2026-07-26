@@ -5,10 +5,7 @@ Converts numbers or strings containing Latin digits (`0-9`) into Bangla digit st
 ## Signature
 
 ```typescript
-digitToBangla(
-  digit: number | string,
-  preserveNonDigit = true
-): string
+digitToBangla(digit: number | string, preserveNonDigit = true): string
 ```
 
 ## Parameters
@@ -34,7 +31,7 @@ digitToBangla(
 
 ## Code Examples
 
-```typescript
+```typescript twoslash
 import { digitToBangla } from 'bn-calendar/utils';
 
 // 1. Default Behavior (preserveNonDigit = true)

@@ -4,7 +4,7 @@ Examples illustrating custom date formats for headers, UI badges, and documents.
 
 ## 1. Full Bangla Date Header
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const date = new BanglaCalendar('2023-04-14');
@@ -15,7 +15,7 @@ console.log(date.format('ddd, DD mmmm (SS), YYYY বঙ্গাব্দ'));
 
 ## 2. Compact Numeric Date
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const date = new BanglaCalendar('2023-04-14');
@@ -26,7 +26,7 @@ console.log(date.format('YYYY/MM/DD'));
 
 ## 3. Escaping Literal Text in Labels
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const date = new BanglaCalendar('2023-04-14');
@@ -37,7 +37,7 @@ console.log(date.format('[তারিখ:] DD mmmm, [অব্দ:] YYYY'));
 
 ## 4. English Localized Formatting
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const date = new BanglaCalendar('2023-04-14');

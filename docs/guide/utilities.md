@@ -8,7 +8,7 @@
 
 Import directly from `bn-calendar/utils`:
 
-```typescript
+```typescript twoslash
 import { banglaToDigit, digitToBangla } from 'bn-calendar/utils';
 ```
 

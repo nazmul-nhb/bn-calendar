@@ -10,7 +10,7 @@ Whether a method returns a new `BanglaCalendar` instance or a native JavaScript 
 
 ### Adding / Subtracting Days (`addDays`)
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const date = new BanglaCalendar('১৪৩০', '১', '১'); // 1 Boishakh 1430

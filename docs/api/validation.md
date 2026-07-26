@@ -12,7 +12,9 @@ static isBanglaYear(value: unknown): value is BanglaYear
 
 Checks whether a value is a valid Bangla year in Bangla digits (`০-৯৯৯৯`).
 
-```typescript
+```typescript twoslash
+import { BanglaCalendar } from 'bn-calendar';
+
 BanglaCalendar.isBanglaYear('১৪৩০'); // true
 BanglaCalendar.isBanglaYear('১০০০০'); // false (too long)
 BanglaCalendar.isBanglaYear('1430');  // false (Latin digits)
@@ -28,7 +30,9 @@ static isBanglaYearEn(value: number): boolean
 
 Checks whether a number is a valid Bangla year in Latin digits (`0-9999`).
 
-```typescript
+```typescript twoslash
+import { BanglaCalendar } from 'bn-calendar';
+
 BanglaCalendar.isBanglaYearEn(1430);  // true
 BanglaCalendar.isBanglaYearEn(10000); // false
 BanglaCalendar.isBanglaYearEn(-1);    // false
@@ -44,7 +48,9 @@ static isBanglaMonth(value: unknown): value is BanglaMonth
 
 Checks whether a value is a valid Bangla month string in Bangla digits (`১-১২`).
 
-```typescript
+```typescript twoslash
+import { BanglaCalendar } from 'bn-calendar';
+
 BanglaCalendar.isBanglaMonth('১');  // true
 BanglaCalendar.isBanglaMonth('১২'); // true
 BanglaCalendar.isBanglaMonth('১৩'); // false
@@ -60,7 +66,9 @@ static isBanglaMonthEn(value: unknown): value is NumberRange<1, 12>
 
 Checks whether a value is a valid Bangla month number in Latin digits (`1-12`).
 
-```typescript
+```typescript twoslash
+import { BanglaCalendar } from 'bn-calendar';
+
 BanglaCalendar.isBanglaMonthEn(1);  // true
 BanglaCalendar.isBanglaMonthEn(12); // true
 BanglaCalendar.isBanglaMonthEn(13); // false
@@ -76,7 +84,9 @@ static isBanglaDate(value: unknown): value is BanglaDate
 
 Checks whether a value is a valid day of month in Bangla digits (`১-৩১`).
 
-```typescript
+```typescript twoslash
+import { BanglaCalendar } from 'bn-calendar';
+
 BanglaCalendar.isBanglaDate('১');   // true
 BanglaCalendar.isBanglaDate('৩১');  // true
 BanglaCalendar.isBanglaDate('৩২');  // false
@@ -92,7 +102,9 @@ static isBanglaDateEn(value: unknown): value is NumberRange<1, 31>
 
 Checks whether a value is a valid day of month in Latin digits (`1-31`).
 
-```typescript
+```typescript twoslash
+import { BanglaCalendar } from 'bn-calendar';
+
 BanglaCalendar.isBanglaDateEn(1);   // true
 BanglaCalendar.isBanglaDateEn(31);  // true
 BanglaCalendar.isBanglaDateEn(32);  // false
@@ -108,7 +120,9 @@ static isBanglaDateString(value: unknown): value is string
 
 Checks whether a string follows the Bangla date pattern (`YYYY-MM-DD` in Bangla digits).
 
-```typescript
+```typescript twoslash
+import { BanglaCalendar } from 'bn-calendar';
+
 BanglaCalendar.isBanglaDateString('১৪৩০-০১-০১'); // true
 BanglaCalendar.isBanglaDateString('1430-01-01'); // false (Latin digits)
 BanglaCalendar.isBanglaDateString('১৪৩০-১৩-০১'); // false (invalid month)
@@ -126,7 +140,9 @@ $hasVariantConfig(value: unknown): value is { variant: BnCalendarVariant }
 
 Checks if a given value is a configuration object containing a valid calendar `variant`.
 
-```typescript
+```typescript twoslash
+import { BanglaCalendar } from 'bn-calendar';
+
 const bnCal = new BanglaCalendar();
 
 bnCal.$hasVariantConfig({ variant: 'revised-2019' }); // true

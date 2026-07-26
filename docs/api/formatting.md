@@ -33,7 +33,7 @@ A formatted string with tokens replaced by localized Bangla digit date parts.
 
 #### Examples
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const date = new BanglaCalendar('2023-04-14');

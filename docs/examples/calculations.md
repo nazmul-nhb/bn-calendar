@@ -19,7 +19,7 @@ console.log(`Difference: ${diffInDays} days`); // 14 days
 
 ## 2. Checking Leap Years across Variants
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 // Year 1431 in revised-2019 variant (2024 is Gregorian leap year)
@@ -35,7 +35,7 @@ console.log(cal1966.daysInMonth(11)); // 31 (Falgun has 31 days)
 
 ## 3. Month & Year Range Boundaries
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const date = new BanglaCalendar('১৪৩০', '৫', '১৫');

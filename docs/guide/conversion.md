@@ -6,7 +6,7 @@ Converting between the Gregorian (Western) calendar and the Bengali calendar is 
 
 When you pass a Gregorian date string, timestamp, or native JavaScript `Date` object to `BanglaCalendar`, the internal engine automatically performs bidirectional conversion to calculate the corresponding Bengali year, month, date, weekday, and season.
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 // Converting a Gregorian string date

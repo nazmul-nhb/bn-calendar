@@ -4,7 +4,7 @@ This guide provides common recipes for real-world scenarios.
 
 ## 1. Getting Today's Date in Bangla
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const today = new BanglaCalendar();
@@ -15,7 +15,7 @@ console.log(`আজ ${today.format('ddd, DD mmmm, YYYY বঙ্গাব্দ'
 
 ## 2. Converting User Input Date
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 import { banglaToDigit } from 'bn-calendar/utils';
 

@@ -15,7 +15,7 @@ Formatting is a central feature of `bn-calendar`. This guide explains how to con
 
 Pass a format pattern string to the `.format()` method:
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const date = new BanglaCalendar('2023-04-14');

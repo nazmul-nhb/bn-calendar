@@ -34,13 +34,13 @@ bun add npm:bn-calendar
 
 ### ES Modules (ESM) / TypeScript
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 ```
 
 You can also use exported aliases if you prefer shorter or alternative names:
 
-```typescript
+```typescript twoslash
 import { BnCalendar, Bongabdo } from 'bn-calendar';
 
 const cal1 = new BnCalendar();
@@ -51,7 +51,7 @@ const cal2 = new Bongabdo();
 
 If you need standalone Bangla-Latin digit conversion functions:
 
-```typescript
+```typescript twoslash
 import { banglaToDigit, digitToBangla } from 'bn-calendar/utils';
 ```
 

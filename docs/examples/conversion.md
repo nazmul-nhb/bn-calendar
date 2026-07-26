@@ -4,7 +4,7 @@ Examples showing how to convert back and forth between Gregorian and Bengali cal
 
 ## 1. Gregorian to Bangla Date Conversion
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 // Converting ISO date string
@@ -19,7 +19,7 @@ console.log(`Bangla date today: ${date2.format('DD mmmm YYYY')}`);
 
 ## 2. Bangla Date to Gregorian `Date` Conversion
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const bnDate = new BanglaCalendar('১৪৩০', '১', '১');
@@ -35,7 +35,7 @@ console.log(`Year: ${bnDate.gregorian.year}, Month: ${bnDate.gregorian.month}, D
 
 ## 3. Timestamp Integration
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const bnCal = new BanglaCalendar('১৪৩০', '১', '১');

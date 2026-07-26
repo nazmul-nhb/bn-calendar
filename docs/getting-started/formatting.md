@@ -6,7 +6,7 @@
 
 Out of the box, `BanglaCalendar` provides three convenient ways to format dates:
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const date = new BanglaCalendar('2023-04-14');

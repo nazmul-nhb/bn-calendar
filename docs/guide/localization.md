@@ -23,7 +23,7 @@ By default, getter methods like `getMonthName()`, `getDayName()`, and `getSeason
 | 11 | ফাল্গুন | Falgun |
 | 12 | চৈত্র | Choitro |
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const date = new BanglaCalendar('2023-04-14');

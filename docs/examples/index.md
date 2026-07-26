@@ -4,7 +4,7 @@ Simple examples demonstrating initialization and property inspection.
 
 ## 1. Creating Current Date
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const today = new BanglaCalendar();
@@ -15,7 +15,7 @@ console.log(today.toString());
 
 ## 2. Instantiating from Specific Date String
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 // From Bangla date string
@@ -29,7 +29,7 @@ console.log(date2.toJSON()); // "১৪৩০-০১-০১"
 
 ## 3. Instantiating from Date Components
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 // Latin numeric arguments (Year, Month, Date)
@@ -45,7 +45,7 @@ console.log(cal2.toJSON());
 
 ## 4. Using Class Aliases
 
-```typescript
+```typescript twoslash
 import { BnCalendar, Bongabdo } from 'bn-calendar';
 
 const dateA = new BnCalendar('১৪৩০-০১-০১');

@@ -102,7 +102,7 @@ Includes standalone helper functions for converting between Bengali digits (`০
 - **`banglaToDigit()`**: Convert Bangla digits to Latin numbers or strings with flexible `forceNumber` toggles.
 - **`digitToBangla()`**: Convert Latin numbers or strings to Bangla digits with optional non-digit preservation.
 
-```typescript
+```typescript twoslash
 import { banglaToDigit, digitToBangla } from 'bn-calendar/utils';
 
 console.log(banglaToDigit('১২৩'));           // 123

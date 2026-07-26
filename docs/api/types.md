@@ -27,11 +27,7 @@ Represents Bangla digits from `'০'` to `'৯'`.
 ### `BanglaYear`
 
 ```typescript
-type BanglaYear =
-  | BanglaDigit
-  | `${$BnOnes}${BanglaDigit}`
-  | `${$BnOnes}${BanglaDigit}${BanglaDigit}`
-  | Repeat<BanglaDigit, 4>
+type BanglaYear = BanglaDigit | `${$BnOnes}${BanglaDigit}` | `${$BnOnes}${BanglaDigit}${BanglaDigit}` | Repeat<BanglaDigit, 4>
 ```
 
 Bangla year represented in Bangla digits (`০-৯৯৯৯`).
@@ -51,13 +47,7 @@ Bangla month represented in Bangla digits (`১-১২` or `০১-১২`).
 ### `BanglaDate`
 
 ```typescript
-type BanglaDate =
-  | $BnOnes
-  | $BnOnesPadded
-  | `১${BanglaDigit}`
-  | `২${BanglaDigit}`
-  | '৩০'
-  | '৩১'
+type BanglaDate = $BnOnes | $BnOnesPadded | `১${BanglaDigit}` | `২${BanglaDigit}` | '৩০' | '৩১'
 ```
 
 Bangla day of month represented in Bangla digits (`১-৩১` or `০১-৩১`).

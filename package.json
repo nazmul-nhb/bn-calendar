@@ -1,129 +1,140 @@
 {
-	"name": "bn-calendar",
-	"version": "1.2.11",
-	"description": "Comprehensive Bengali calendar system library built for any JavaScript and TypeScript environment.",
-	"main": "./dist/index.cjs",
-	"type": "module",
-	"sideEffects": false,
-	"scripts": {
-		"build": "tsdown",
-		"dev:pkg": "tsdown --watch",
-		"typecheck": "tsc --noEmit",
-		"prepublishOnly": "pnpm run build",
-		"commit": "nhb-commit",
-		"count": "nhb-count",
-		"delete": "nhb-delete",
-		"lint": "biome lint --diagnostic-level=info",
-		"fix": "biome check --write --diagnostic-level=info",
-		"format": "biome format --write --diagnostic-level=info",
-		"changelog": "node scripts/generate-changelog.mjs",
-		"prepare": "husky",
-		"dev": "vitepress dev docs",
-		"build:docs": "vitepress build docs",
-		"preview": "vitepress preview docs"
-	},
-	"keywords": [
-		"bn-calendar",
-		"bangla-calendar",
-		"bengali-calendar",
-		"date",
-		"nhb",
-		"nazmul-nhb",
-		"nhb-toolbox",
-		"toolbox-x",
-		"bongabdo",
-		"calendar",
-		"bangla",
-		"bengali",
-		"gregorian",
-		"bn-gregorian",
-		"bangla-gregorian",
-		"bengali-gregorian",
-		"bangla-date",
-		"calendar-utilities",
-		"bangla-gregorian-conversion",
-		"bangla-date-converter",
-		"bangla-calendar-helper",
-		"bengali-date",
-		"bangla-calendar-utilities",
-		"bengali-gregorian-conversion",
-		"bengali-date-converter",
-		"bengali-calendar-helper",
-		"bn-date",
-		"bengali-calendar-utilities",
-		"bn-gregorian-conversion",
-		"bn-date-converter",
-		"bn-calendar-helper",
-		"bn-calendar-utilities"
-	],
-	"publishConfig": {
-		"access": "public"
-	},
-	"files": ["dist", "LICENSE", "README.md", "package.json"],
-	"repository": {
-		"type": "git",
-		"url": "git+https://github.com/nazmul-nhb/bn-calendar.git"
-	},
-	"homepage": "https://bncal.nazmul-nhb.dev",
-	"author": {
-		"name": "Nazmul Hassan",
-		"email": "nazmulnhb@gmail.com",
-		"url": "https://nazmul-nhb.dev"
-	},
-	"contributors": [
-		{
-			"name": "Nazmul Hassan",
-			"email": "nazmulnhb007@yahoo.com",
-			"url": "https://github.com/nazmul-nhb"
-		},
-		{
-			"name": "Nazmul Hassan",
-			"email": "nazmulnhb@gmail.com",
-			"url": "https://github.com/nhb-nazmul"
-		}
-	],
-	"bugs": {
-		"url": "https://github.com/nazmul-nhb/bn-calendar/issues",
-		"email": "nazmulnhb@gmail.com"
-	},
-	"license": "Apache-2.0",
-	"packageManager": "pnpm@11.17.0+sha512.cca3cea332ad254bb84145f966d19f4879615210346fc92c79a047f23a0d7b3cca3c3792f0076ba1f1831d277efbcf0a9119b31a9a60eca7fb3d6231f331ef72",
-	"devDependencies": {
-		"@biomejs/biome": "^2.5.5",
-		"@types/node": "^26.1.1",
-		"husky": "^9.1.7",
-		"lint-staged": "^17.2.0",
-		"nhb-scripts": "^1.9.2",
-		"toolbox-x": "2.6.16",
-		"tsdown": "^0.22.14",
-		"typescript": "^6.0.3",
-		"vitepress": "2.0.0-alpha.18",
-		"vitepress-plugin-group-icons": "^1.7.5"
-	},
-	"lint-staged": {
-		"*.+((c|m)?js(x)?|(c|m)?ts(x)?)": [
-			"biome format --write --diagnostic-level=info",
-			"biome lint --diagnostic-level=info"
-		]
-	},
-	"module": "./dist/index.mjs",
-	"types": "./dist/index.d.cts",
-	"exports": {
-		".": {
-			"import": "./dist/index.mjs",
-			"require": "./dist/index.cjs"
-		},
-		"./types": {
-			"import": "./dist/types.mjs",
-			"require": "./dist/types.cjs"
-		},
-		"./utils": {
-			"import": "./dist/utils.mjs",
-			"require": "./dist/utils.cjs"
-		},
-		"./package.json": "./package.json"
-	},
-	"inlinedDependencies": {
-		"toolbox-x": "2.6.16"
-	}
+  "name": "bn-calendar",
+  "version": "1.2.13",
+  "description": "Comprehensive Bengali calendar system library built for any JavaScript and TypeScript environment.",
+  "main": "./dist/index.cjs",
+  "type": "module",
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsdown",
+    "dev:pkg": "tsdown --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build",
+    "commit": "nhb-commit",
+    "count": "nhb-count",
+    "delete": "nhb-delete",
+    "lint": "biome lint --diagnostic-level=info",
+    "fix": "biome check --write --diagnostic-level=info",
+    "format": "biome format --write --diagnostic-level=info",
+    "changelog": "node scripts/generate-changelog.mjs",
+    "prepare": "husky",
+    "dev": "vitepress dev docs",
+    "build:docs": "vitepress build docs",
+    "preview": "vitepress preview docs"
+  },
+  "keywords": [
+    "bn-calendar",
+    "bangla-calendar",
+    "bengali-calendar",
+    "bn calendar",
+    "bangla calendar",
+    "bengali calendar",
+    "date",
+    "nhb",
+    "nazmul-nhb",
+    "nhb-toolbox",
+    "bongabdo",
+    "calendar",
+    "bangla",
+    "bengali",
+    "gregorian",
+    "bn-gregorian",
+    "bangla-gregorian",
+    "bengali-gregorian",
+    "bangla-date",
+    "bangla date",
+    "calendar-utilities",
+    "bangla-gregorian-conversion",
+    "bangla-date-converter",
+    "bangla-calendar-helper",
+    "bengali-date",
+    "bengali date",
+    "bangla-calendar-utilities",
+    "bengali-gregorian-conversion",
+    "bengali-date-converter",
+    "bengali-calendar-helper",
+    "bn-date",
+    "bn date",
+    "bengali-calendar-utilities",
+    "bn-gregorian-conversion",
+    "bn-date-converter",
+    "bn-calendar-helper",
+    "bn-calendar-utilities"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nazmul-nhb/bn-calendar.git"
+  },
+  "homepage": "https://bncal.nazmul-nhb.dev",
+  "author": {
+    "name": "Nazmul Hassan",
+    "email": "nazmulnhb@gmail.com",
+    "url": "https://nazmul-nhb.dev"
+  },
+  "contributors": [
+    {
+      "name": "Nazmul Hassan",
+      "email": "nazmulnhb007@yahoo.com",
+      "url": "https://github.com/nazmul-nhb"
+    },
+    {
+      "name": "Nazmul Hassan",
+      "email": "nazmulnhb@gmail.com",
+      "url": "https://github.com/nhb-nazmul"
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/nazmul-nhb/bn-calendar/issues",
+    "email": "nazmulnhb@gmail.com"
+  },
+  "license": "Apache-2.0",
+  "packageManager": "pnpm@11.17.0+sha512.cca3cea332ad254bb84145f966d19f4879615210346fc92c79a047f23a0d7b3cca3c3792f0076ba1f1831d277efbcf0a9119b31a9a60eca7fb3d6231f331ef72",
+  "devDependencies": {
+    "@biomejs/biome": "^2.5.5",
+    "@shikijs/vitepress-twoslash": "^4.3.1",
+    "@types/node": "^26.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.2.0",
+    "nhb-scripts": "^1.9.2",
+    "toolbox-x": "2.6.16",
+    "tsdown": "^0.22.14",
+    "typescript": "^6.0.3",
+    "vitepress": "2.0.0-alpha.18",
+    "vitepress-plugin-group-icons": "^1.7.5"
+  },
+  "lint-staged": {
+    "*.+((c|m)?js(x)?|(c|m)?ts(x)?)": [
+      "biome format --write --diagnostic-level=info",
+      "biome lint --diagnostic-level=info"
+    ]
+  },
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    },
+    "./types": {
+      "import": "./dist/types.mjs",
+      "require": "./dist/types.cjs"
+    },
+    "./utils": {
+      "import": "./dist/utils.mjs",
+      "require": "./dist/utils.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "inlinedDependencies": {
+    "toolbox-x": "2.6.16"
+  }
 }

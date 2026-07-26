@@ -6,7 +6,7 @@ Get up and running with `bn-calendar` in just a few minutes.
 
 The primary export of this library is the `BanglaCalendar` class. It allows creating, formatting, manipulating, and converting Bengali calendar dates.
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 // 1. Current date in Bangla calendar

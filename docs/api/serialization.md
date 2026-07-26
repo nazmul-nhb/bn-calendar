@@ -25,7 +25,7 @@ toDate(): Date
 
 #### Example
 
-```typescript
+```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 const bnDate = new BanglaCalendar('১৪৩০', '১', '১');
@@ -52,7 +52,9 @@ toJSON(): string
 
 #### Example
 
-```typescript
+```typescript twoslash
+import { BanglaCalendar } from 'bn-calendar';
+
 const bnDate = new BanglaCalendar('2023-04-14');
 
 console.log(bnDate.toJSON()); // "১৪৩০-০১-০১"
@@ -79,12 +81,14 @@ valueOf(): number
 
 #### Example
 
-```typescript
+```typescript twoslash
+import { BanglaCalendar } from 'bn-calendar';
+
 const date1 = new BanglaCalendar('১৪৩০', '১', '১');
 const date2 = new BanglaCalendar('১৪৩০', '১', '৮');
 
 const ts1 = date1.valueOf(); // 1681430400000
-const diffMs = date2 - date1; // 604800000 (7 days in ms)
+const diffMs = date2.valueOf() - date1.valueOf(); // 604800000 (7 days in ms)
 
 console.log(diffMs / (1000 * 60 * 60 * 24)); // 7 days
 ```
