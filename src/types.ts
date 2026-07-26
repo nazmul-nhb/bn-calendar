@@ -1,6 +1,7 @@
 import type { DateFormatToken } from 'toolbox-x/types/date';
 import type { $BnOnes, BanglaDigit, NumberRange } from 'toolbox-x/types/number';
 import type { LooseLiteral, Repeat } from 'toolbox-x/types/utils';
+import type { BanglaCalendar } from './BanglaCalendar';
 import type {
 	BN_DAYS,
 	BN_MONTH_TABLES,
@@ -122,3 +123,14 @@ export interface BnCalendarConfig {
 	/** - Calendar variant to use. Defaults to `'revised-2019'`. */
 	variant?: BnCalendarVariant;
 }
+
+/** Extract property keys from a class which are not methods */
+export type PropertyKeys<T, PK extends PropertyKey = PropertyKey> = {
+	[K in keyof T]-?: T[K] extends (...args: any[]) => any ? never : Extract<K, PK>;
+}[keyof T];
+
+/** Represents only the properties and values of a class as object excluding the methods */
+export type Properties<T, PK extends PropertyKey = PropertyKey> = Pick<T, PropertyKeys<T, PK>>;
+
+/** String keys of {@link BanglaCalendar} which are not methods */
+export type BnCalKeys = PropertyKeys<BanglaCalendar, string>;

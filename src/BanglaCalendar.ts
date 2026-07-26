@@ -28,6 +28,7 @@ import type {
 	BanglaYear,
 	BnCalendarConfig,
 	BnCalendarVariant,
+	BnCalKeys,
 } from './types';
 
 /**
@@ -61,10 +62,10 @@ import type {
  */
 export class BanglaCalendar {
 	/** Bangla calendar variant */
-	readonly variant: BnCalendarVariant;
+	readonly variant!: BnCalendarVariant;
 
 	/** Bangla year */
-	readonly year: Readonly<{
+	readonly year!: Readonly<{
 		/** Bangla year in Bangla digit */
 		bn: BanglaYear;
 		/** Bangla year in Latin digit */
@@ -72,7 +73,7 @@ export class BanglaCalendar {
 	}>;
 
 	/** Bangla month */
-	readonly month: Readonly<{
+	readonly month!: Readonly<{
 		/** Bangla month in Bangla digit */
 		bn: BanglaMonth;
 		/** Bangla month in Latin digit */
@@ -80,7 +81,7 @@ export class BanglaCalendar {
 	}>;
 
 	/** Bangla day of the month */
-	readonly date: Readonly<{
+	readonly date!: Readonly<{
 		/** Bangla day of the month in Bangla digit */
 		bn: BanglaDate;
 		/** Bangla day of the month in Latin digit */
@@ -88,7 +89,7 @@ export class BanglaCalendar {
 	}>;
 
 	/** Gregorian equivalent of the current bangla date */
-	readonly gregorian: Readonly<{
+	readonly gregorian!: Readonly<{
 		/** Gregorian year in Latin digit */
 		year: number;
 		/** Gregorian month in Latin digit (`1-12`) */
@@ -98,10 +99,10 @@ export class BanglaCalendar {
 	}>;
 
 	/** Gets the day of the week (0-6, where 0 is Sunday (রবিবার)). */
-	readonly weekDay: Enumerate<7>;
+	readonly weekDay!: Enumerate<7>;
 
 	/** Gets ISO weekday: 1 = Monday, 7 = Sunday */
-	readonly isoWeekDay: NumberRange<1, 7>;
+	readonly isoWeekDay!: NumberRange<1, 7>;
 
 	/**
 	 * * Creates a `BanglaCalendar` instance from the current Gregorian date.
@@ -235,7 +236,10 @@ export class BanglaCalendar {
 		bnDateOrCfg?: BanglaDate | NumberRange<1, 31> | BnCalendarConfig,
 		config?: BnCalendarConfig
 	) {
-		this.variant = this.#processVariants(dateBnYrOrCfg, bnMonthOrCfg, bnDateOrCfg, config);
+		this.#lock(
+			'variant',
+			this.#processVariants(dateBnYrOrCfg, bnMonthOrCfg, bnDateOrCfg, config)
+		);
 
 		let date =
 			dateBnYrOrCfg instanceof Date
@@ -299,28 +303,37 @@ export class BanglaCalendar {
 			}
 		}
 
-		this.year = {
-			bn: digitToBangla(bnYear) as BanglaYear,
-			en: bnYear,
-		};
+		this.#lock(
+			'year',
+			Object.freeze({
+				bn: digitToBangla(bnYear) as BanglaYear,
+				en: bnYear,
+			})
+		);
 
-		this.month = {
-			bn: digitToBangla(bnMonth) as BanglaMonth,
-			en: bnMonth as NumberRange<1, 12>,
-		};
+		this.#lock(
+			'month',
+			Object.freeze({
+				bn: digitToBangla(bnMonth) as BanglaMonth,
+				en: bnMonth as NumberRange<1, 12>,
+			})
+		);
 
-		this.date = {
-			bn: digitToBangla(bnDate) as BanglaDate,
-			en: bnDate as NumberRange<1, 31>,
-		};
+		this.#lock(
+			'date',
+			Object.freeze({
+				bn: digitToBangla(bnDate) as BanglaDate,
+				en: bnDate as NumberRange<1, 31>,
+			})
+		);
 
 		const { gy, gm, gd, wd } = _extractDateUnits(this.toDate());
 
-		this.gregorian = { year: gy, month: gm, date: gd };
+		this.#lock('gregorian', Object.freeze({ year: gy, month: gm, date: gd }));
 
-		this.weekDay = wd;
+		this.#lock('weekDay', wd);
 
-		this.isoWeekDay = wd === 0 ? 7 : wd;
+		this.#lock('isoWeekDay', wd === 0 ? 7 : wd);
 	}
 
 	[Symbol.toPrimitive](hint: string): string | number {
@@ -863,6 +876,16 @@ export class BanglaCalendar {
 		};
 
 		return _formatDateCore(format || 'ddd, DD mmmm (SS), YYYY বঙ্গাব্দ', dateComponents);
+	}
+
+	/** Lock a property as real readonly using {@link Object.defineProperty} */
+	#lock<Key extends BnCalKeys>(key: Key, value: BanglaCalendar[Key]) {
+		Object.defineProperty(this, key, {
+			value: value,
+			writable: false,
+			configurable: false,
+			enumerable: true,
+		});
 	}
 
 	/** Process Gregorian base year and calculated year from optional Bangla year and month */
