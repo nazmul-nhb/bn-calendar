@@ -195,7 +195,7 @@ async function main() {
 	const changelog = [
 		'# Changelog',
 		'',
-		'All notable changes to **bn-calendar** will be documented in this file.',
+		'All notable changes to **bn-calendar** will be documented here.',
 		'',
 		`> Auto-generated from git history using [changelog-maker](https://github.com/nodejs/changelog-maker).`,
 		'',

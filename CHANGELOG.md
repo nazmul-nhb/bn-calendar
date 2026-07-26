@@ -1,8 +1,13 @@
 # Changelog
 
-All notable changes to **bn-calendar** will be documented in this file.
+All notable changes to **bn-calendar** will be documented here.
 
 > Auto-generated from git history using [changelog-maker](https://github.com/nodejs/changelog-maker).
+
+## [Unreleased/Latest](https://github.com/nazmul-nhb/bn-calendar/compare/v1.3.0...HEAD)
+
+* \[[`9593954e9d`](https://github.com/nazmul-nhb/bn-calendar/commit/9593954e9d)] - 📚 docs(notes): updated reference part for `Chronos` and `banglaPlugin` (Nazmul Hassan)
+* \[[`01aece5d83`](https://github.com/nazmul-nhb/bn-calendar/commit/01aece5d83)] - 🔧 update(docs): added reference to other libraries and updated changelog (Nazmul Hassan)
 
 ## [v1.3.0](https://github.com/nazmul-nhb/bn-calendar/releases/tag/v1.3.0) — 2026-07-26
 
