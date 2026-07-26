@@ -25,7 +25,7 @@ bun add bn-calendar
 ```
 
 ```bash [deno]
-bun add npm:bn-calendar
+deno add npm:bn-calendar
 ```
 
 :::
@@ -58,3 +58,33 @@ import { banglaToDigit, digitToBangla } from 'bn-calendar/utils';
 ::: info Standalone Utilities
 The `banglaToDigit()` and `digitToBangla()` functions are re-exported from the [`toolbox-x`](https://toolbox-x.nazmul-nhb.dev/) library. You can import them directly from `bn-calendar/utils` without installing extra packages.
 :::
+
+## Related Packages
+
+  <a target="_blank" href="https://www.npmjs.com/package/chronos-date">
+    <img src="https://img.shields.io/badge/Date--Time_Library-chronos--date-green" alt="chronos-date" />
+  </a>
+
+  <a target="_blank" href="https://www.npmjs.com/package/toolbox-x">
+    <img src="https://img.shields.io/badge/Utility_Library-toolbox--x-steelblue" alt="toolbox-x" />
+  </a>
+
+  <a target="_blank" href="https://www.npmjs.com/package/nhb-hooks">
+    <img src="https://img.shields.io/badge/React_Hooks-nhb--hooks-blue" alt="nhb-hooks" />
+  </a>
+
+  <a target="_blank" href="https://www.npmjs.com/package/locality-idb">
+    <img src="https://img.shields.io/badge/IndexedDB_ORM-locality--idb-darkviolet" alt="locality-idb" />
+  </a>
+
+  <a target="_blank" href="https://www.npmjs.com/package/nhb-scripts">
+    <img src="https://img.shields.io/badge/Development_Scripts-nhb--scripts-red" alt="nhb-scripts" />
+  </a>
+
+  <a target="_blank" href="https://www.npmjs.com/package/nhb-express">
+    <img src="https://img.shields.io/badge/Express_Server_Scaffolder-nhb--express-orange" alt="nhb-express" />
+  </a>
+
+  <a target="_blank" href="https://www.npmjs.com/package/nhb-anagram-generator">
+    <img src="https://img.shields.io/badge/Anagram_Generator-nhb--anagram--generator-steelblue" alt="nhb-anagram-generator" />
+  </a>

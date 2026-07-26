@@ -4,6 +4,20 @@ All notable changes to **bn-calendar** will be documented in this file.
 
 > Auto-generated from git history using [changelog-maker](https://github.com/nodejs/changelog-maker).
 
+## [v1.3.0](https://github.com/nazmul-nhb/bn-calendar/releases/tag/v1.3.0) — 2026-07-26
+
+[Compare changes](https://github.com/nazmul-nhb/bn-calendar/compare/v1.2.13...v1.3.0)
+
+* \[[`5ed9b4c246`](https://github.com/nazmul-nhb/bn-calendar/commit/5ed9b4c246)] - ✨ feat(core): locked all non-method properties run-time readonly using `Object.defineProperty` (Nazmul Hassan)
+* \[[`1cd9f245c3`](https://github.com/nazmul-nhb/bn-calendar/commit/1cd9f245c3)] - 🔧 update(docs): build library before build:docs (Nazmul Hassan)
+
+## [v1.2.13](https://github.com/nazmul-nhb/bn-calendar/releases/tag/v1.2.13) — 2026-07-26
+
+[Compare changes](https://github.com/nazmul-nhb/bn-calendar/compare/v1.2.11...v1.2.13)
+
+* \[[`76cf53fbe5`](https://github.com/nazmul-nhb/bn-calendar/commit/76cf53fbe5)] - 🔧 update: integrated `twoslash` in the docs, added more keywords in `package.json` (Nazmul Hassan)
+* \[[`eaa6c73f85`](https://github.com/nazmul-nhb/bn-calendar/commit/eaa6c73f85)] - 🛠️ chore(scripts): updated build:docs in package.json (Nazmul Hassan)
+
 ## [v1.2.11](https://github.com/nazmul-nhb/bn-calendar/releases/tag/v1.2.11) — 2026-07-25
 
 [Compare changes](https://github.com/nazmul-nhb/bn-calendar/compare/v1.2.10...v1.2.11)

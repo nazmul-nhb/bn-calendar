@@ -19,6 +19,15 @@ Understanding the design tradeoffs of `bn-calendar` will help you determine how 
 - **Extensive Surface Area**:
   The `BanglaCalendar` class combines date representation, manipulation, formatting, and validation into a single class. While convenient for general use, lightweight utilities may pull in the full class if not using subpath exports.
 
-::: tip Future Roadmap Considerations
-In future releases, extended time handling or modular plugins (such as date-time formatters or time-zone converters) may be introduced as separate classes or extension plugins to maintain a lightweight core.
+::: tip Need Full Date-Time Support?
+
+`bn-calendar` is intentionally designed as a **date-only** library. It focuses on Bangla calendar conversion, manipulation, formatting, and validation while keeping the core lightweight, dependency-free, and easy to integrate.
+
+If your application requires **date-time operations**, **time zones**, **durations**, or other advanced features, use the dedicated date-time library [`chronos-date`](https://chronos.nazmul-nhb.dev) together with the [`banglaPlugin`](https://chronos.nazmul-nhb.dev/docs/plugins/bangla-plugin). When used with the [`Chronos`](https://toolbox.nazmul-nhb.dev/docs/classes/Chronos) class, they provide a complete Bangla date-time solution with advanced utilities.
+
+- **`bn-calendar`** → Dedicated Bangla calendar conversion, manipulation, formatting, and validation.
+- **[`chronos-date`](https://chronos.nazmul-nhb.dev) + [`banglaPlugin`](https://chronos.nazmul-nhb.dev/docs/plugins/bangla-plugin)** → Complete date-time management with support for Bangla calendar, time, time zones, durations, and other advanced date-time operations.
+
+To preserve a lightweight core and excellent tree-shaking, future ecosystem enhancements will continue to be delivered as **optional extensions or companion packages** rather than expanding the scope of `bn-calendar` itself.
+
 :::

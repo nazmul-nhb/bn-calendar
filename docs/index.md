@@ -52,7 +52,7 @@ bun add bn-calendar
 ```
 
 ```bash [deno]
-bun add npm:bn-calendar
+deno add npm:bn-calendar
 ```
 
 :::
