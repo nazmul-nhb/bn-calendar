@@ -79,6 +79,9 @@ constructor(
 
 1. **Default Initialization**: If no valid inputs are provided, the constructor defaults to current system date.
 2. **String Inputs**: Accepts both Gregorian (`YYYY-MM-DD`) and Bangla (`YYYY-MM-DD` in Bangla digits) formats.
+    :::tip Note
+    Supported separators for Bangla date components are `-`, `/`, `_`, `.`, and space (` `).
+    :::
 3. **Number vs Timestamp**: Single numeric inputs greater than `9999` are treated as Unix timestamps in milliseconds; single numeric inputs `0-9999` are treated as Bangla years.
 4. **Variant Fallback**: Defaults to `'revised-2019'` variant unless explicitly specified in `config.variant`.
 5. **Time Normalization**: All instances normalize time components to midnight UTC (`00:00:00.000Z`).

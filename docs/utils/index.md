@@ -1,6 +1,6 @@
 # Utilities Overview
 
-`bn-calendar` provides standalone digit conversion utilities via the `bn-calendar/utils` subpath. These functions allow converting between Bengali digits (`০-৯`) and Latin/Arabic digits (`0-9`).
+`bn-calendar` provides standalone digit conversion utilities via the `bn-calendar/utils` subpath. These functions allow converting between Bengali digits (`০-৯`) and Latin/Arabic digits (`0-9`). It also provides standalone [**type guards**](./guards) to validate values independent of the core class.
 
 ## Import Path
 

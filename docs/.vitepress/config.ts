@@ -86,6 +86,7 @@ export default defineConfig({
 					{ text: 'Overview', link: '/utils/' },
 					{ text: 'banglaToDigit()', link: '/utils/bangla-to-digit' },
 					{ text: 'digitToBangla()', link: '/utils/digit-to-bangla' },
+					{ text: 'Type Guards', link: '/utils/guards' },
 				],
 			},
 			{

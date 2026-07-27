@@ -118,13 +118,18 @@ BanglaCalendar.isBanglaDateEn(32);  // false
 static isBanglaDateString(value: unknown): value is string
 ```
 
-Checks whether a string follows the Bangla date pattern (`YYYY-MM-DD` in Bangla digits).
+Checks whether a string is a valid Bangla date formatted as `YYYY-MM-DD` using Bangla digits and supported separators.
+
+:::tip
+Supported separators are `-`, `/`, `_`, `.`, and space (` `).
+:::
 
 ```typescript twoslash
 import { BanglaCalendar } from 'bn-calendar';
 
 BanglaCalendar.isBanglaDateString('১৪৩০-০১-০১'); // true
 BanglaCalendar.isBanglaDateString('1430-01-01'); // false (Latin digits)
+BanglaCalendar.isBanglaDateString('১৪৩০/১/১'); // true (single-digit month/date)
 BanglaCalendar.isBanglaDateString('১৪৩০-১৩-০১'); // false (invalid month)
 ```
 
