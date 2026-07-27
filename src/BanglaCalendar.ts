@@ -30,6 +30,7 @@ import type {
 	BnCalendarVariant,
 	BnCalKeys,
 } from './types';
+import { isBanglaDate, isBanglaDateString, isBanglaMonth, isBanglaYear } from './utils';
 
 /**
  * @class Represents a date in the Bangla calendar system with support for different variants.
@@ -118,8 +119,9 @@ export class BanglaCalendar {
 	 * @param config - Calendar configuration options
 	 *
 	 * @remarks
-	 * - Bangla date string must be in `YYYY-MM-DD` format (padded with `০` or non-padded) in Bangla digit
-	 * - Bangla date string is validated internally using {@link isBanglaDateString} method
+	 * - Bangla date string must be in `YYYY-MM-DD` format (padded with `০` or non-padded) in Bangla digit with supported separators
+	 * - Accepted separators are `-`, `/`, `_`, `.`, and space (` `).
+	 * - Bangla date string is validated internally using {@link isBanglaDateString} guard
 	 *
 	 * @example
 	 * const fromBanglaString = new BanglaCalendar('১৪৩২-১১-০৮');
@@ -245,8 +247,7 @@ export class BanglaCalendar {
 			dateBnYrOrCfg instanceof Date
 				? dateBnYrOrCfg
 				: new Date(
-						isDateString(dateBnYrOrCfg) &&
-							!BanglaCalendar.isBanglaDateString(dateBnYrOrCfg)
+						isDateString(dateBnYrOrCfg) && !isBanglaDateString(dateBnYrOrCfg)
 							? dateBnYrOrCfg
 							: isNumber(dateBnYrOrCfg) &&
 									!BanglaCalendar.isBanglaYearEn(dateBnYrOrCfg)
@@ -260,30 +261,30 @@ export class BanglaCalendar {
 
 		const { year, month, monthDate } = this.#processDate(date);
 
-		let bnYear = BanglaCalendar.isBanglaYear(dateBnYrOrCfg)
+		let bnYear = isBanglaYear(dateBnYrOrCfg)
 			? banglaToDigit(dateBnYrOrCfg)
 			: isNumber(dateBnYrOrCfg) && BanglaCalendar.isBanglaYearEn(dateBnYrOrCfg)
 				? dateBnYrOrCfg
 				: year;
 
-		let bnMonth = BanglaCalendar.isBanglaMonth(bnMonthOrCfg)
+		let bnMonth = isBanglaMonth(bnMonthOrCfg)
 			? banglaToDigit(bnMonthOrCfg)
 			: BanglaCalendar.isBanglaMonthEn(bnMonthOrCfg)
 				? bnMonthOrCfg
 				: month;
 
-		let bnDate = BanglaCalendar.isBanglaDate(bnDateOrCfg)
+		let bnDate = isBanglaDate(bnDateOrCfg)
 			? banglaToDigit(bnDateOrCfg)
 			: BanglaCalendar.isBanglaDateEn(bnDateOrCfg)
 				? bnDateOrCfg
 				: monthDate;
 
-		if (BanglaCalendar.isBanglaDateString(dateBnYrOrCfg)) {
-			const parts = dateBnYrOrCfg.replace(/['"]/g, '').split('-');
+		if (isBanglaDateString(dateBnYrOrCfg)) {
+			const [y, m, d] = dateBnYrOrCfg.replace(/['"]/g, '').split(/[-/_.]|\s+/);
 
-			bnYear = banglaToDigit(parts[0]);
-			bnMonth = banglaToDigit(parts[1]);
-			bnDate = banglaToDigit(parts[2]);
+			bnYear = banglaToDigit(y);
+			bnMonth = banglaToDigit(m);
+			bnDate = banglaToDigit(d);
 		}
 
 		const { gregYear } = this.#processGregYear(bnYear, bnMonth);
@@ -989,10 +990,7 @@ export class BanglaCalendar {
 	 * BanglaCalendar.isBanglaYear('1430');  // false (Latin digits)
 	 */
 	static isBanglaYear(value: unknown): value is BanglaYear {
-		// /^[০-৯]{1,4}$/ // Allow unlimited left padding with ০
-		// return isNonEmptyString(value) && /^[০-৯]{1,4}$/.test(value.trim());
-		// return isNonEmptyString(value) && /^(?:০|[১-৯][০-৯]{0,3})$/.test(value.trim());
-		return isNonEmptyString(value) && /^(?:০{0,3}[১-৯][০-৯]{0,3}|০)$/.test(value.trim());
+		return isBanglaYear(value);
 	}
 
 	/**
@@ -1024,8 +1022,7 @@ export class BanglaCalendar {
 	 * BanglaCalendar.isBanglaMonth('0');  // false (Latin digit)
 	 */
 	static isBanglaMonth(value: unknown): value is BanglaMonth {
-		// return isNonEmptyString(value) && /^(?:[১-৯]|১০|১১|১২)$/.test(value.trim());
-		return isNonEmptyString(value) && /^(?:০?[১-৯]|১০|১১|১২)$/.test(value.trim());
+		return isBanglaMonth(value);
 	}
 
 	/**
@@ -1057,8 +1054,7 @@ export class BanglaCalendar {
 	 * BanglaCalendar.isBanglaDate('০');   // false
 	 */
 	static isBanglaDate(value: unknown): value is BanglaDate {
-		// return isNonEmptyString(value) && /^(?:[১-৯]|[১২][০-৯]|৩০|৩১)$/.test(value.trim());
-		return isNonEmptyString(value) && /^(?:০?[১-৯]|[১২][০-৯]|৩০|৩১)$/.test(value.trim());
+		return isBanglaDate(value);
 	}
 
 	/**
@@ -1078,33 +1074,24 @@ export class BanglaCalendar {
 	}
 
 	/**
-	 * @static Checks whether a string follows the Bangla date format pattern (`YYYY-MM-DD` with Bangla digits).
+	 * @static Checks whether a string is a valid Bangla date formatted as `YYYY-MM-DD` using Bangla digits and supported separators.
 	 *
 	 * @param value - String value to check
-	 * @returns `true` if the string matches the pattern `"বছর-মাস-দিন"` with Bangla digits, `false` otherwise
+	 * @returns `true` if the value is a valid Bangla date string with valid year, month, and date components; otherwise `false`.
 	 *
 	 * @example
 	 * BanglaCalendar.isBanglaDateString('১৪৩০-০১-০১'); // true
 	 * BanglaCalendar.isBanglaDateString('1430-01-01'); // false (Latin digits)
-	 * BanglaCalendar.isBanglaDateString('১৪৩০-১-১'); // true (single-digit month/date)
+	 * BanglaCalendar.isBanglaDateString('১৪৩০/১/১'); // true (single-digit month/date)
 	 * BanglaCalendar.isBanglaDateString('১৪৩০-১৩-০১'); // false (invalid month)
 	 *
 	 * @remarks
-	 * - Accepts both zero-padded and non-padded Bangla digits
-	 * - Validates year, month, and date components separately
-	 * - Year must be `‌০-৯৯৯৯`, month must be `১-১২`, date must be `১-৩১`
+	 * - Accepts both zero-padded and non-padded components.
+	 * - Accepted separators are `-`, `/`, `_`, `.`, and space (` `).
+	 * - Year, month, and date are validated individually.
+	 * - Year must be `০–৯৯৯৯`, month `১–১২`, and date `১–৩১`.
 	 */
 	static isBanglaDateString(value: unknown): value is string {
-		if (isNonEmptyString(value) && value.includes('-')) {
-			const [year, month, date] = value.replace(/['"]/g, '').split('-');
-
-			return (
-				BanglaCalendar.isBanglaYear(year) &&
-				BanglaCalendar.isBanglaMonth(month) &&
-				BanglaCalendar.isBanglaDate(date)
-			);
-		}
-
-		return false;
+		return isBanglaDateString(value);
 	}
 }
