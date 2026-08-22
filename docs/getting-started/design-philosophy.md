@@ -23,10 +23,10 @@ Understanding the design tradeoffs of `bn-calendar` will help you determine how 
 
 `bn-calendar` is intentionally designed as a **date-only** library. It focuses on Bangla calendar conversion, manipulation, formatting, and validation while keeping the core lightweight, dependency-free, and easy to integrate.
 
-If your application requires **date-time operations**, **time zones**, **durations**, or other advanced features, use the dedicated date-time library [`chronos-date`](https://chronos.nazmul-nhb.dev) together with the [`banglaPlugin`](https://chronos.nazmul-nhb.dev/docs/plugins/bangla-plugin). When used with the [`Chronos`](https://toolbox.nazmul-nhb.dev/docs/classes/Chronos) class, they provide a complete Bangla date-time solution with advanced utilities.
+If your application requires **date-time operations**, **time zones**, **durations**, or other advanced features, use the dedicated date-time library [`chronos-date`](https://chronos-date.vercel.app) together with the [`banglaPlugin`](https://chronos-date.vercel.app/docs/plugins/bangla-plugin). When used with the [`Chronos`](https://chronos-date.vercel.app/docs/chronos) class, they provide a complete Bangla date-time solution with advanced utilities.
 
 - **`bn-calendar`** → Dedicated Bangla calendar conversion, manipulation, formatting, and validation for **calendar dates**.
-- [**`Chronos`**](https://toolbox.nazmul-nhb.dev/docs/classes/Chronos) + [**`banglaPlugin`**](https://chronos.nazmul-nhb.dev/docs/plugins/bangla-plugin) → Complete Bangla date-time management with support for calendar conversion, time, time zones, durations, and other advanced temporal operations.
+- [**`Chronos`**](https://chronos-date.vercel.app/docs/chronos) + [**`banglaPlugin`**](https://chronos-date.vercel.app/docs/plugins/bangla-plugin) → Complete Bangla date-time management with support for calendar conversion, time, time zones, durations, and other advanced temporal operations.
 
 To preserve a lightweight core and excellent tree-shaking, future ecosystem enhancements will continue to be delivered as **optional extensions or companion packages** rather than expanding the scope of `bn-calendar` itself.
 

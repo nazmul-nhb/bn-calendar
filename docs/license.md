@@ -10,4 +10,4 @@ You are free to use, modify, and distribute this project under the terms of the 
 
 ---
 
-Built with ❤️ by [**Nazmul Hassan**](https://nazmul-nhb.dev)
+Built with ❤️ by [**Nazmul Hassan**](https://nazmul-nhb.vercel.app)

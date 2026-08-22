@@ -56,7 +56,7 @@ import { banglaToDigit, digitToBangla } from 'bn-calendar/utils';
 ```
 
 ::: info Standalone Utilities
-The `banglaToDigit()` and `digitToBangla()` functions are re-exported from the [`toolbox-x`](https://toolbox-x.nazmul-nhb.dev/) library. You can import them directly from `bn-calendar/utils` without installing extra packages.
+The `banglaToDigit()` and `digitToBangla()` functions are re-exported from the [`toolbox-x`](https://toolbox-x.vercel.app/) library. You can import them directly from `bn-calendar/utils` without installing extra packages.
 :::
 
 ## Related Packages

@@ -2,7 +2,7 @@
 
 > Comprehensive Bengali calendar system library built for any JavaScript and TypeScript environment.
 
-[![Bangla Calendar](https://raw.githubusercontent.com/nazmul-nhb/bn-calendar/refs/heads/main/docs/public/bn-calendar.png)](https://bncal.nazmul-nhb.dev/)
+[![Bangla Calendar](https://raw.githubusercontent.com/nazmul-nhb/bn-calendar/refs/heads/main/docs/public/bn-calendar.png)](https://bn-calendar.vercel.app/)
 
 <p>
   <!-- Package Info -->
@@ -114,7 +114,7 @@ console.log(date4.toStringEn());
 // Output: "Shukrobar (Friday), 1 Boishakh, 1430 [Grisma (Summer)]"
 ```
 
-> Read full documentation: [bncal.nazmul-nhb.dev](https://bncal.nazmul-nhb.dev/)
+> Read full documentation: [bn-calendar.vercel.app](https://bn-calendar.vercel.app/)
 
 ---
 
@@ -189,4 +189,4 @@ You are free to use, modify, and distribute this project under the terms of the 
 
 ---
 
-Built with ❤️ by [**Nazmul Hassan**](https://nazmul-nhb.dev)
+Built with ❤️ by [**Nazmul Hassan**](https://nazmul-nhb.vercel.app)
